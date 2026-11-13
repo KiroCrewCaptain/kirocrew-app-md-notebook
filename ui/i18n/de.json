@@ -1,0 +1,208 @@
+{
+  "apps": {
+    "mdNotebook": {
+      "badge": {
+        "deleting": "wird gelöscht",
+        "pending": "ausstehend"
+      },
+      "banner": {
+        "diskConflict": "Diese Notiz wurde auf der Festplatte geändert, seit du sie geöffnet hast.",
+        "keepMine": "Meine Version behalten",
+        "staleBackend": "Das Notizen-Backend führt älteren Code als diese Seite aus – fehlend: {{features}}. Schalte Notizen auf der Apps-Seite aus und wieder ein, um es neu zu starten.",
+        "staleBackendRoute": "Das Notizen-Backend führt älteren Code als diese Seite aus. Schalte Notizen auf der Apps-Seite aus und wieder ein, um es neu zu starten.",
+        "syncConflict": "Die Synchronisierung wurde durch einen Merge-Konflikt gestoppt, daher wurde nichts gepusht. Betroffene Notizen: {{paths}}",
+        "useDisk": "Version auf der Festplatte verwenden"
+      },
+      "body": {
+        "backlinks": "Verlinkt von {{n}}",
+        "empty": "Wähle eine Notiz oder erstelle eine mit der Schaltfläche +."
+      },
+      "boot": {
+        "loading": "Wird geladen…",
+        "unreachable": "Das Notizen-Backend ist nicht erreichbar: {{message}}. Möglicherweise startet es noch."
+      },
+      "connect": {
+        "attachAction": "Ordner anhängen",
+        "attachHelp": "Verwendet einen bereits vorhandenen Git-Ordner an seinem Platz – ohne zweite Kopie.",
+        "attachNoRemoteHelp": "Kein Git-Remote? Das funktioniert auch — der Vault verhält sich gleich und die Notizen bleiben auf diesem Rechner.",
+        "attachTab": "Ordner anhängen",
+        "attaching": "Anhängen…",
+        "branch": "Branch",
+        "cancel": "Abbrechen",
+        "choose": "Auswählen…",
+        "choosing": "Auswahl…",
+        "cloneAction": "Vault verbinden",
+        "cloneHelp": "Klont ein GitHub-Repository und behält eine eigene Arbeitskopie.",
+        "cloneTab": "Repository klonen",
+        "cloning": "Klonen…",
+        "knowledgeFailed": "Vault verbunden, aber die Wissenssynchronisierung ist fehlgeschlagen: {{message}}",
+        "localFolder": "Lokaler Ordner",
+        "localFolderPlaceholder": "~/Developer/my-notes",
+        "pickerFailed": "Die Ordnerauswahl konnte nicht geöffnet werden: {{message}}",
+        "pickerNeedsMac": "Die Ordnerauswahl benötigt macOS – gib den Pfad ein.",
+        "repoUrl": "Repository-URL",
+        "repoUrlPlaceholder": "https://github.com/you/notes",
+        "subfolder": "Unterordner (optional)",
+        "subfolderPlaceholder": "notes",
+        "title": "Vault verbinden",
+        "token": "Zugriffstoken (optional)",
+        "tokenPlaceholder": "github_pat_…"
+      },
+      "editor": {
+        "blockAria": "Block bearbeiten",
+        "renameHint": "Klicken, um diese Notiz umzubenennen",
+        "titleAria": "Notiztitel"
+      },
+      "header": {
+        "view_raw": "Markdown-Quelltext",
+        "view_rendered": "Gerendert"
+      },
+      "knowledge": {
+        "connectHelp": "Fügt diesen Vault der Wissensbibliothek hinzu, damit Agenten deine Notizen durchsuchen können. Später unter {{capabilities}} → {{tab}} änderbar.",
+        "label": "Mit {{productName}} Wissen synchronisieren"
+      },
+      "manifest": {
+        "description": "Führe ein Markdown-Notizbuch, das in einem Git-Repository liegt, damit deine Notizen versioniert, portabel und in jedem anderen Editor lesbar sind. Richte es auf ein GitHub-Repository, und es klont eine Arbeitskopie, oder hänge einen Ordner an, den du schon hast — auch einen bestehenden Obsidian-Vault — und es übernimmt diesen Checkout an seinem Ort, ohne eine zweite Kopie anzulegen. Notizen werden als formatierter Text dargestellt, in den du zum Bearbeiten direkt hineinklickst, [[wikilinks]] verbinden sie, und jede Notiz zeigt, was auf sie zurückverweist. Die Synchronisierung committet, pullt und pusht in einem Schritt, und ein Merge-Konflikt wird gemeldet — mit einer Liste der betroffenen Notizen und Abbruch des Merges — statt irgendetwas zu überschreiben.",
+        "display_name": "Notizen",
+        "highlight_1": "Deine Notizen sind einfaches Markdown in einem Git-Repository — keine Bindung, lesbar mit Obsidian oder jedem Editor",
+        "highlight_2": "Klone ein GitHub-Repository als Vault oder hänge einen Ordner an, den du schon hast, ohne ihn zu kopieren",
+        "highlight_3": "Klicke einen beliebigen dargestellten Block an, um ihn direkt zu bearbeiten; Enter beginnt einen neuen Block, Tab verschachtelt Listen",
+        "highlight_4": "[[Wikilinks]] zwischen Notizen, mit einer Backlink-Liste, die zeigt, was auf die gerade gelesene Notiz verweist",
+        "highlight_5": "Volltextsuche über Titel und Inhalte, dazu Ordner- und Flachansicht mit sechs Sortierungen",
+        "highlight_6": "Die Synchronisierung committet, pullt und pusht in einem Schritt; ein Merge-Konflikt listet die betroffenen Notizen auf und überschreibt nichts",
+        "highlight_7": "Ein Speichern wird abgelehnt, wenn sich die Datei seit dem Öffnen auf der Festplatte geändert hat, damit Änderungen von anderswo nie zerstört werden",
+        "highlight_8": "Optional einen Vault in die Wissensbibliothek indexieren, damit Agenten deine Notizen durchsuchen können",
+        "page_label": "Notizen",
+        "use_case_1": "Bearbeite einen portablen Markdown-Vault mit Wikilinks, Backlinks, Suche, Git-Verlauf und optionaler Knowledge-Indizierung.",
+        "configuration_1": "Klone ein Git-Repository oder hänge einen vorhandenen lokalen Ordner an und aktiviere optional Knowledge und die geplante Synchronisierung; private GitHub-Klone benötigen ein PAT oder ein authentifiziertes gh."
+      },
+      "panel": {
+        "connectVault": "Vault verbinden",
+        "hide": "Notizbereich ausblenden",
+        "newRootNote": "Neue Notiz auf oberster Ebene",
+        "noMatches": "Keine Treffer",
+        "searchPlaceholder": "Notizen durchsuchen",
+        "show": "Notizbereich anzeigen",
+        "sortAndView": "Sortierung und Ansicht",
+        "sortSection": "Sortieren nach",
+        "switchVault": "Vault wechseln",
+        "vaults": "Vaults",
+        "viewSection": "Ansicht",
+        "view_folders": "Ordner",
+        "view_list": "Flache Liste"
+      },
+      "preview": {
+        "detailsSummaryFallback": "Details",
+        "mermaidError": "Ungültiges Mermaid-Diagramm — Quelltext wird angezeigt."
+      },
+      "row": {
+        "delete": "Notiz löschen",
+        "deleteAction": "Löschen",
+        "deleteConfirm": "Du kannst sie aus <trash>.trash</trash> wiederherstellen. Notizen im Papierkorb werden nicht mit dem Remote synchronisiert.",
+        "deleteTitle": "„{{title}}“ in den Papierkorb verschieben?",
+        "duplicate": "Notiz duplizieren",
+        "pin": "Notiz anpinnen",
+        "rename": "Notiz umbenennen",
+        "renameField": "Notizname",
+        "unpin": "Notiz abpinnen"
+      },
+      "settings": {
+        "active": "Aktiv",
+        "authGh": "Verwendet deine GitHub-CLI-Anmeldung.",
+        "authNone": "Kein GitHub-Zugriff – füge ein Token hinzu, um private Repositories zu synchronisieren.",
+        "authStored": "Verwendet ein in dieser App gespeichertes Token.",
+        "autoCommit": "Automatisch in Historie speichern",
+        "autoCommitHelp": "Committet deine Änderungen alle {{n}} Minuten in die lokale Git-Historie des Vaults, damit du nie manuell speichern musst. Es wird nichts an ein Remote gepusht.",
+        "autoSync": "Automatische Synchronisierung",
+        "autoSyncHelp": "Überträgt deine Änderungen zu GitHub und holt die neuesten, nach Zeitplan. Läuft im Hintergrund weiter, wenn Notes geschlossen ist – solange {{productName}} geöffnet ist. Pausiert, solange ein Konflikt deine Entscheidung braucht.",
+        "badgeCloned": "Geklont",
+        "badgeLocal": "Lokaler Ordner",
+        "clear": "Löschen",
+        "close": "Einstellungen schließen",
+        "every": "Alle",
+        "githubSection": "GitHub-Zugriff",
+        "intervalAria": "Intervall der automatischen Synchronisierung in Minuten",
+        "knowledgeAdded": "Zum Wissen hinzugefügt.",
+        "knowledgeAddedCount_one": "Zum Wissen hinzugefügt – {{n}} Datei zur Indexierung eingereiht.",
+        "knowledgeAddedCount_other": "Zum Wissen hinzugefügt – {{n}} Dateien zur Indexierung eingereiht.",
+        "knowledgeAdding": "Wird zum Wissen hinzugefügt…",
+        "knowledgeIndexed": "In der Wissensbibliothek indexiert – Agenten können diese Notizen durchsuchen.",
+        "knowledgeNotIndexed": "Nicht indexiert. Aktivieren, damit Agenten diesen Vault durchsuchen können.",
+        "knowledgeRemoved": "Aus dem Wissen entfernt.",
+        "knowledgeRemoving": "Wird aus dem Wissen entfernt…",
+        "minutes": "Minuten",
+        "noRemote": "Kein Remote",
+        "open": "Öffnen",
+        "prefsSaveFailed": "Die Sync-Einstellung konnte nicht gespeichert werden: {{message}}",
+        "recording": "Aufnahme…",
+        "remove": "Entfernen",
+        "removeConfirm": "Diesen Vault aus der App entfernen? Die Dateien bleiben unangetastet auf der Festplatte – nur die Verbindung wird vergessen.",
+        "removeFailed": "Der Vault konnte nicht entfernt werden: {{message}}",
+        "removeIt": "Entfernen",
+        "reset": "Zurücksetzen",
+        "save": "Speichern",
+        "shortcut": "Kurzbefehl für manuelle Synchronisierung",
+        "shortcutHelpIdle": "Klicken, um einen neuen Kurzbefehl aufzunehmen.",
+        "shortcutHelpRecording": "Drücke die gewünschten Tasten – Esc bricht ab.",
+        "shortcutNeedsModifier": "Verwende mindestens ⌘, Ctrl oder ⌥ – ein einzelner Buchstabe würde beim Tippen auslösen.",
+        "subtitle": "Vaults, GitHub-Zugriff und Synchronisierung",
+        "syncSection": "Synchronisierung",
+        "title": "Einstellungen",
+        "tokenCleared": "Token gelöscht.",
+        "tokenClearFailed": "Token konnte nicht gelöscht werden: {{message}}",
+        "tokenPlaceholderEmpty": "github_pat_…",
+        "tokenPlaceholderStored": "Gespeichertes Token ersetzen…",
+        "tokenSaved": "Token gespeichert.",
+        "tokenSaveFailed": "Token konnte nicht gespeichert werden: {{message}}",
+        "vaultsSection": "Vaults"
+      },
+      "sort": {
+        "createdNewOld": "Erstellt – neu nach alt",
+        "createdOldNew": "Erstellt – alt nach neu",
+        "modifiedNewOld": "Geändert – neu nach alt",
+        "modifiedOldNew": "Geändert – alt nach neu",
+        "nameAZ": "Dateiname – A bis Z",
+        "nameZA": "Dateiname – Z bis A"
+      },
+      "sync": {
+        "action": "Synchronisieren",
+        "ago_d": "Vor {{n}} T. synchronisiert",
+        "ago_h": "Vor {{n}} Std. synchronisiert",
+        "ago_m": "Vor {{n}} Min. synchronisiert",
+        "justNow": "Gerade synchronisiert",
+        "localAction": "Lokal speichern",
+        "localTitle": "Änderungen in die lokale Git-Historie dieses Vaults committen. Dieser Vault hat kein Remote, es wird also nichts gepusht.",
+        "syncing": "Synchronisierung"
+      },
+      "title": "Notizen",
+      "trash": {
+        "empty": "Aus diesem Vault wurde noch nichts gelöscht, daher gibt es keinen .trash-Ordner.",
+        "failed": "Ordner konnte nicht geöffnet werden: {{message}}",
+        "open": ".trash-Ordner öffnen",
+        "unsupported": "Das Öffnen eines Ordners wird auf diesem System nicht unterstützt."
+      }
+    }
+  },
+  "api": {
+    "client": {
+      "proxy_challenge_framed": "Öffne {{origin}} in einem neuen Tab — erscheint eine Anmeldeseite, ist die Sitzung deines Zugriffsproxys abgelaufen. In diesem Panel funktioniert die Anmeldung nicht. Melde dich dort an und lade dann diese Seite neu.",
+      "proxy_challenge_reload": "Lade diesen Browser-Tab neu — erscheint eine Anmeldeseite, ist die Sitzung deines Zugriffsproxys abgelaufen. Wenn nicht, hat ein Proxy oder eine Firewall vor diesem Dashboard die Anfrage abgewiesen; prüfe die Protokolle des Proxys oder versuche es später erneut."
+    }
+  },
+  "nav": {
+    "agent_capabilities": "Anpassen",
+    "mcp_servers": "MCP-Server"
+  },
+  "pages": {
+    "capabilitiesPage": {
+      "knowledge_label": "Wissen",
+      "skills_label": "Fähigkeiten"
+    }
+  },
+  "components": {
+    "readingWidthToggle": {
+      "title_md": "Mittlere Breite",
+      "title_full": "Volle Breite"
+    }
+  }
+}

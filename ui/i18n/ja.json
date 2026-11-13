@@ -1,0 +1,207 @@
+{
+  "apps": {
+    "mdNotebook": {
+      "badge": {
+        "deleting": "削除中",
+        "pending": "保留中"
+      },
+      "banner": {
+        "diskConflict": "このノートは開いてから、ディスク上で変更されました。",
+        "keepMine": "自分のバージョンを保持",
+        "staleBackend": "ノートバックエンド が実行しているコードがこのページより古い。不足している: {{features}}。アプリページの ノート をオフ/オンにしてバックエンドを再起動してください。",
+        "staleBackendRoute": "ノートバックエンド が実行しているコードがこのページより古い。アプリページの ノート をオフ/オンにしてバックエンドを再起動してください。",
+        "syncConflict": "マージ競合で同期が停止したため、何もプッシュされませんでした。競合するノート: {{paths}}",
+        "useDisk": "ディスク上のバージョンを使用"
+      },
+      "body": {
+        "backlinks": "{{n}}からリンク済み",
+        "empty": "ノートを選択するか、+ ボタンで新規作成してください。"
+      },
+      "boot": {
+        "loading": "読み込み中…",
+        "unreachable": "ノートバックエンド に接続できませんでした: {{message}}。まだ起動中の可能性があります。"
+      },
+      "connect": {
+        "attachAction": "フォルダーを接続",
+        "attachHelp": "既存の git フォルダーを使用します。2 番目のコピーは作成されません。",
+        "attachNoRemoteHelp": "git リモートなし？ それでも動作します。ボールトは同じように動作し、ノートはこのマシンに保存されます。",
+        "attachTab": "フォルダーを接続",
+        "attaching": "接続中…",
+        "branch": "ブランチ",
+        "cancel": "キャンセル",
+        "choose": "選択…",
+        "choosing": "選択中…",
+        "cloneAction": "ボールトを接続",
+        "cloneHelp": "GitHub リポジトリをクローンし、独自の作業コピーを保持します。",
+        "cloneTab": "リポジトリをクローン",
+        "cloning": "クローン中…",
+        "knowledgeFailed": "ボールトが接続されましたが、知識の同期に失敗しました: {{message}}",
+        "localFolder": "ローカルフォルダー",
+        "localFolderPlaceholder": "~/Developer/my-notes",
+        "pickerFailed": "フォルダーピッカーを開くことができませんでした: {{message}}",
+        "pickerNeedsMac": "フォルダーピッカーには macOS が必要です。代わりにパスを入力してください。",
+        "repoUrl": "リポジトリ URL",
+        "repoUrlPlaceholder": "https://github.com/you/notes",
+        "subfolder": "サブフォルダー (オプション)",
+        "subfolderPlaceholder": "notes",
+        "title": "ボールトを接続",
+        "token": "アクセストークン (オプション)",
+        "tokenPlaceholder": "github_pat_…"
+      },
+      "editor": {
+        "blockAria": "ブロックの編集",
+        "renameHint": "クリックしてこのノートの名前を変更",
+        "titleAria": "ノートタイトル"
+      },
+      "header": {
+        "view_raw": "Markdown ソース",
+        "view_rendered": "レンダリング済み"
+      },
+      "knowledge": {
+        "connectHelp": "このボールトを知識ライブラリに追加して、エージェントがノートを検索できるようにします。これは後で{{capabilities}} → {{tab}}で変更できます。",
+        "label": "{{productName}} ナレッジと同期"
+      },
+      "manifest": {
+        "use_case_1": "wikilink、バックリンク、検索、Git 履歴、任意の Knowledge インデックス機能を備えた、持ち運び可能な Markdown ボールトを編集します。",
+        "configuration_1": "Git リポジトリをクローンするか既存のローカルフォルダーを接続し、必要に応じて Knowledge と定期同期を有効にします。非公開 GitHub リポジトリのクローンには PAT または認証済みの gh が必要です。",
+        "description": "git リポジトリに置かれたマークダウンノートブックを保持してください。ノートはバージョン管理され、ポータブルで、他のエディタで読み取り可能です。GitHub リポジトリを指すと、作業コピーがクローンされるか、既存のフォルダーを接続します。既存の Obsidian ボールトなどを含む。フォルダーは 2 番目のコピーを作成せずにその場で採用されます。ノートは、クリックしてすぐに編集できるフォーマット済みテキストとしてレンダリングされます。[[wikilinks]] はそれらを接続し、すべてのノートは何がそれにリンクバックしているかを示します。同期は 1 つのステップでコミット、プル、プッシュを行い、マージ競合は何かを上書きするのではなく、競合するノートを一覧に表示し、マージを中止して報告されます。",
+        "display_name": "ノート",
+        "highlight_1": "ノートはプレーンマークダウン git リポジトリ内にあります。ロックイン不要、Obsidian または任意のエディタで読み取り可能",
+        "highlight_2": "GitHub リポジトリをボールトとしてクローンするか、既存のフォルダーを接続してコピーせずに使用",
+        "highlight_3": "レンダリングされた任意のブロックをクリックしてその場で編集。Enter で新しいブロックを開始、Tab でリストをネスト",
+        "highlight_4": "[[wikilinks]] ノート間で、ノートを指しているものを示すバックリンクリストを表示",
+        "highlight_5": "タイトルとコンテンツ全体を検索でき、フォルダービューとフラットビューの6種類のソート順序に対応しています",
+        "highlight_6": "1ステップで同期、プル、プッシュが可能。マージコンフリクトが生じた場合は競合しているノートのリストを表示し、何も上書きしません",
+        "highlight_7": "ファイルを開いてから、そのファイルがディスク上で変更された場合、保存は拒否されます。これにより、他の場所で行われた編集が上書きされることはありません",
+        "highlight_8": "オプションでボールトをナレッジライブラリにインデックスすると、エージェントはノートを検索できるようになります",
+        "page_label": "ノート"
+      },
+      "panel": {
+        "connectVault": "ボールトを接続",
+        "hide": "ノートパネルを非表示",
+        "newRootNote": "トップレベルに新しいノートを作成",
+        "noMatches": "一致するものはありません",
+        "searchPlaceholder": "ノートを検索",
+        "show": "ノートパネルを表示",
+        "sortAndView": "ソートと表示",
+        "sortSection": "ソート順",
+        "switchVault": "ボールトを切り替え",
+        "vaults": "ボールト",
+        "viewSection": "表示",
+        "view_folders": "フォルダー",
+        "view_list": "フラットリスト"
+      },
+      "preview": {
+        "detailsSummaryFallback": "詳細",
+        "mermaidError": "無効な Mermaid 図 — ソースを表示しています。"
+      },
+      "row": {
+        "delete": "ノートを削除",
+        "deleteAction": "削除",
+        "deleteConfirm": "<trash>.trash</trash>から復元できます。削除されたノートはリモートに同期されません。",
+        "deleteTitle": "「{{title}}」をゴミ箱に移動しますか？",
+        "duplicate": "ノートを複製",
+        "pin": "ノートをピン",
+        "rename": "ノート名を変更",
+        "renameField": "ノート名",
+        "unpin": "ノートをアンピン"
+      },
+      "settings": {
+        "active": "アクティブ",
+        "authGh": "GitHub CLIログインを使用しています。",
+        "authNone": "GitHub アクセスなし—プライベートリポジトリを同期するにはトークンを追加してください。",
+        "authStored": "このアプリに保存されたトークンを使用しています。",
+        "autoCommit": "履歴に自動保存",
+        "autoCommitHelp": "ボールトのローカルgit履歴に、{{n}}分ごとに編集をコミットします。手動で保存する必要はありません。リモートにはプッシュされません。",
+        "autoSync": "自動同期",
+        "autoSyncHelp": "変更を GitHub にプッシュし、定期的に最新を取得します。Notes を閉じていても、{{productName}} が起動している間はバックグラウンドで動作します。コンフリクトの判断が必要な場合は一時停止します。",
+        "badgeCloned": "クローン済み",
+        "badgeLocal": "ローカルフォルダー",
+        "clear": "クリア",
+        "close": "設定を閉じる",
+        "every": "毎",
+        "githubSection": "GitHub アクセス",
+        "intervalAria": "自動同期間隔(分)",
+        "knowledgeAdded": "ナレッジに追加されました。",
+        "knowledgeAddedCount_other": "ナレッジに追加されました—{{n}}個のファイルがインデックス待ちです。",
+        "knowledgeAdding": "ナレッジに追加中…",
+        "knowledgeIndexed": "ナレッジライブラリにインデックスされています—エージェントはこれらのノートを検索できます。",
+        "knowledgeNotIndexed": "インデックスされていません。有効にすると、エージェントはこのボールトを検索できるようになります。",
+        "knowledgeRemoved": "ナレッジから削除されました。",
+        "knowledgeRemoving": "ナレッジから削除中…",
+        "minutes": "分",
+        "noRemote": "リモートなし",
+        "open": "開く",
+        "prefsSaveFailed": "同期設定を保存できませんでした: {{message}}",
+        "recording": "記録中…",
+        "remove": "削除",
+        "removeConfirm": "このボールトをアプリから削除しますか？ ファイルはディスク上に残ります—接続情報だけが忘れられます。",
+        "removeFailed": "ボールトを削除できませんでした: {{message}}",
+        "removeIt": "削除",
+        "reset": "リセット",
+        "save": "保存",
+        "shortcut": "手動同期ショートカット",
+        "shortcutHelpIdle": "クリックして新しいショートカットを記録します。",
+        "shortcutHelpRecording": "使用したいキーを押してください—キャンセルする場合はEscを押してください。",
+        "shortcutNeedsModifier": "⌘、Ctrl、または⌥の少なくとも1つを使用してください—通常の文字だけではタイピング時に発動してしまいます。",
+        "subtitle": "ボールト、GitHub アクセスと同期",
+        "syncSection": "同期",
+        "title": "設定",
+        "tokenCleared": "トークンをクリアしました。",
+        "tokenClearFailed": "トークンをクリアできませんでした: {{message}}",
+        "tokenPlaceholderEmpty": "github_pat_…",
+        "tokenPlaceholderStored": "保存されたトークンを置き換え…",
+        "tokenSaved": "トークンを保存しました。",
+        "tokenSaveFailed": "トークンを保存できませんでした: {{message}}",
+        "vaultsSection": "ボールト"
+      },
+      "sort": {
+        "createdNewOld": "作成—新しい順",
+        "createdOldNew": "作成—古い順",
+        "modifiedNewOld": "変更—新しい順",
+        "modifiedOldNew": "変更—古い順",
+        "nameAZ": "ファイル名—A~Z",
+        "nameZA": "ファイル名—Z~A"
+      },
+      "sync": {
+        "action": "同期",
+        "ago_d": "{{n}}日前に同期",
+        "ago_h": "{{n}}時間前に同期",
+        "ago_m": "{{n}}分前に同期",
+        "justNow": "今同期しました",
+        "localAction": "ローカルに保存",
+        "localTitle": "このボールトのローカルgit履歴に変更をコミットします。このボールトはリモートがないため、何もプッシュされません。",
+        "syncing": "同期中"
+      },
+      "title": "ノート",
+      "trash": {
+        "empty": "このボールトからまだ何も削除されていないため、.trashフォルダーはありません。",
+        "failed": "フォルダーを開くことができません:{{message}}",
+        "open": ".trashフォルダーを開く",
+        "unsupported": "このシステムではフォルダーを開くことはできません。"
+      }
+    }
+  },
+  "api": {
+    "client": {
+      "proxy_challenge_framed": "新しいタブで {{origin}} を開いてください。サインインページが表示された場合は、アクセスプロキシのセッションが切れています。このパネル内ではサインインできません。そちらでサインインしてから、このページを再読み込みしてください。",
+      "proxy_challenge_reload": "このブラウザータブを再読み込みしてください。サインインページが表示された場合は、アクセスプロキシのセッションが切れています。表示されない場合は、このダッシュボードの前段にあるプロキシまたはファイアウォールがリクエストを拒否しています。プロキシのログを確認するか、後でもう一度お試しください。"
+    }
+  },
+  "nav": {
+    "agent_capabilities": "カスタマイズ",
+    "mcp_servers": "MCP サーバー"
+  },
+  "pages": {
+    "capabilitiesPage": {
+      "knowledge_label": "ナレッジ",
+      "skills_label": "スキル"
+    }
+  },
+  "components": {
+    "readingWidthToggle": {
+      "title_md": "中幅",
+      "title_full": "全幅"
+    }
+  }
+}

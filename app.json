@@ -1,0 +1,238 @@
+{
+  "name": "md-notebook",
+  "version": "1.0.0",
+  "displayName": "Notes",
+  "description": "Keep a markdown notebook that lives in a git repository, so your notes are versioned, portable, and readable by any other editor. Point it at a GitHub repo and it clones a working copy, or attach a folder you already have — including an existing Obsidian vault — and it adopts that checkout in place without making a second copy. Notes render as formatted text you can click straight into to edit, [[wikilinks]] connect them, and every note shows what links back to it. Sync commits, pulls and pushes in one step, and a merge conflict is reported — listing the conflicted notes and aborting the merge — rather than overwriting anything.",
+  "author": "kirocrew",
+  "license": "Apache-2.0",
+  "minKiroCrewVersion": "0.13.0",
+  "tags": [
+    "notes",
+    "markdown",
+    "git",
+    "writing",
+    "productivity"
+  ],
+  "highlights": [
+    "Your notes are plain markdown in a git repo — no lock-in, readable by Obsidian or any editor",
+    "Clone a GitHub repo as a vault, or attach a folder you already have without copying it",
+    "Click any rendered block to edit it in place; Enter starts a new block, Tab nests lists",
+    "[[Wikilinks]] between notes, with a backlinks list showing what points at the note you are reading",
+    "Full-text search across titles and content, plus folder and flat views with six sort orders",
+    "One-step sync commits, pulls and pushes; a merge conflict lists the conflicted notes and overwrites nothing",
+    "A save is refused if the file changed on disk since you opened it, so edits made elsewhere are never clobbered",
+    "Optionally index a vault into the Knowledge library so agents can search your notes"
+  ],
+  "defaultEnabled": false,
+  "credentialMasks": [
+    "state/"
+  ],
+  "platform": {
+    "os": [
+      "macos",
+      "linux",
+      "windows"
+    ]
+  },
+  "iconPath": "assets/icon.png",
+  "heroImage": "assets/hero-light.png",
+  "heroImageDark": "assets/hero-dark.png",
+  "heroImageDetail": "assets/hero-detail-light.png",
+  "heroImageDetailDark": "assets/hero-detail-dark.png",
+  "permissions": {
+    "api": [
+      "/apps/md-notebook/api",
+      "/api/knowledge"
+    ]
+  },
+  "backend": {
+    "entryPoint": "backend/server.py",
+    "port": "auto",
+    "healthCheck": "/health"
+  },
+  "ui": {
+    "entry": "dist/index.mjs",
+    "pages": [
+      {
+        "route": "/apps/md-notebook",
+        "label": "Notes"
+      }
+    ]
+  },
+  "useCases": [
+    "Edit a portable Markdown vault with wikilinks, backlinks, search, Git history, and optional Knowledge indexing."
+  ],
+  "configuration": [
+    "Clone a Git repository or attach an existing local folder, then optionally enable Knowledge and scheduled sync; private GitHub clones need a PAT or authenticated gh."
+  ],
+  "screenshots": [
+    "assets/screenshot-main.png"
+  ],
+  "l10n": {
+    "bn": {
+      "displayName": "নোট",
+      "description": "git রিপোজিটরিতেই থাকে এমন একটি markdown নোটবই রাখো, যাতে তোমার নোট ভার্সন করা, বহনযোগ্য এবং অন্য যেকোনো এডিটরেও পড়ার মতো থাকে। কোনো GitHub রিপোর দিকে তাক করালে এটি একটি কাজের কপি ক্লোন করে, বা আগে থেকেই আছে এমন কোনো ফোল্ডার জুড়ে দাও — এমনকি চালু থাকা একটি Obsidian ভল্টও — এটি সেই চেকআউটকে জায়গাতেই গ্রহণ করে, দ্বিতীয় কপি বানায় না। নোট সাজানো লেখা হিসেবে দেখা যায় এবং সোজা তাতে ক্লিক করেই সম্পাদনা করা যায়, [[wikilinks]] সেগুলোকে জোড়ে, আর প্রতিটি নোট দেখায় কোন কোন নোট তার দিকে লিঙ্ক করছে। সিঙ্ক এক ধাপেই কমিট, পুল ও পুশ করে; আর মার্জ কনফ্লিক্ট হলে কিছু ওভাররাইট না করে কনফ্লিক্টে থাকা নোটের তালিকা দিয়ে মার্জ বাতিল করে জানিয়ে দেয়।",
+      "pageLabel": "নোট",
+      "highlights": [
+        "তোমার নোট git রিপোতে সাধারণ markdown — কোনো লক-ইন নেই, Obsidian বা যেকোনো এডিটরে পড়া যায়",
+        "কোনো GitHub রিপো ভল্ট হিসেবে ক্লোন করো, বা আগে থেকেই আছে এমন কোনো ফোল্ডার কপি না করেই জুড়ে দাও",
+        "সাজানো যেকোনো ব্লকে ক্লিক করে সেখানেই সম্পাদনা করো; Enter নতুন ব্লক শুরু করে, Tab তালিকা ভেতরে ঢোকায়",
+        "নোটের মধ্যে [[Wikilinks]], সঙ্গে ব্যাকলিঙ্ক তালিকা — তুমি যে নোট পড়ছ তার দিকে কী কী তাক করে আছে তা দেখায়",
+        "শিরোনাম ও লেখা জুড়ে পূর্ণ-টেক্সট খোঁজ, সঙ্গে ফোল্ডার ও সমতল ভিউ এবং ছয়টি সাজানোর ক্রম",
+        "এক ধাপের সিঙ্ক কমিট, পুল ও পুশ করে; মার্জ কনফ্লিক্ট হলে কনফ্লিক্টে থাকা নোটের তালিকা দেয় আর কিছুই ওভাররাইট করে না",
+        "তুমি খোলার পর ফাইল ডিস্কে বদলে গেলে সেভ করতে দেওয়া হয় না, তাই অন্য কোথাও করা সম্পাদনা কখনও মুছে যায় না",
+        "চাইলে কোনো ভল্ট নলেজ লাইব্রেরিতে ইনডেক্স করো, যাতে এজেন্টরা তোমার নোট খুঁজে দেখতে পারে"
+      ]
+    },
+    "de": {
+      "displayName": "Notizen",
+      "description": "Führe ein Markdown-Notizbuch, das in einem Git-Repository liegt, damit deine Notizen versioniert, portabel und in jedem anderen Editor lesbar sind. Richte es auf ein GitHub-Repository, und es klont eine Arbeitskopie, oder hänge einen Ordner an, den du schon hast — auch einen bestehenden Obsidian-Vault — und es übernimmt diesen Checkout an seinem Ort, ohne eine zweite Kopie anzulegen. Notizen werden als formatierter Text dargestellt, in den du zum Bearbeiten direkt hineinklickst, [[wikilinks]] verbinden sie, und jede Notiz zeigt, was auf sie zurückverweist. Die Synchronisierung committet, pullt und pusht in einem Schritt, und ein Merge-Konflikt wird gemeldet — mit einer Liste der betroffenen Notizen und Abbruch des Merges — statt irgendetwas zu überschreiben.",
+      "pageLabel": "Notizen",
+      "highlights": [
+        "Deine Notizen sind einfaches Markdown in einem Git-Repository — keine Bindung, lesbar mit Obsidian oder jedem Editor",
+        "Klone ein GitHub-Repository als Vault oder hänge einen Ordner an, den du schon hast, ohne ihn zu kopieren",
+        "Klicke einen beliebigen dargestellten Block an, um ihn direkt zu bearbeiten; Enter beginnt einen neuen Block, Tab verschachtelt Listen",
+        "[[Wikilinks]] zwischen Notizen, mit einer Backlink-Liste, die zeigt, was auf die gerade gelesene Notiz verweist",
+        "Volltextsuche über Titel und Inhalte, dazu Ordner- und Flachansicht mit sechs Sortierungen",
+        "Die Synchronisierung committet, pullt und pusht in einem Schritt; ein Merge-Konflikt listet die betroffenen Notizen auf und überschreibt nichts",
+        "Ein Speichern wird abgelehnt, wenn sich die Datei seit dem Öffnen auf der Festplatte geändert hat, damit Änderungen von anderswo nie zerstört werden",
+        "Optional einen Vault in die Wissensbibliothek indexieren, damit Agenten deine Notizen durchsuchen können"
+      ]
+    },
+    "es": {
+      "displayName": "Notas",
+      "description": "Mantén un cuaderno en markdown que vive en un repositorio git, así tus notas quedan versionadas, son portables y se pueden leer con cualquier otro editor. Apúntalo a un repositorio de GitHub y clona una copia de trabajo, o adjunta una carpeta que ya tengas — incluida una bóveda de Obsidian existente — y adopta ese checkout tal cual, sin hacer una segunda copia. Las notas se muestran como texto con formato en el que puedes hacer clic para editarlo directamente, los [[wikilinks]] las conectan y cada nota muestra qué apunta a ella. La sincronización confirma, trae y envía los cambios en un solo paso, y un conflicto de fusión se reporta — listando las notas en conflicto y abortando la fusión — en lugar de sobrescribir nada.",
+      "pageLabel": "Notas",
+      "highlights": [
+        "Tus notas son markdown simple en un repositorio git — sin dependencia de un proveedor, legibles con Obsidian o cualquier editor",
+        "Clona un repositorio de GitHub como bóveda, o adjunta una carpeta que ya tengas sin copiarla",
+        "Haz clic en cualquier bloque renderizado para editarlo ahí mismo; Enter empieza un bloque nuevo y Tab anida listas",
+        "[[Wikilinks]] entre notas, con una lista de retroenlaces que muestra qué apunta a la nota que estás leyendo",
+        "Búsqueda de texto completo en títulos y contenido, además de vistas de carpetas y plana con seis criterios de orden",
+        "La sincronización en un paso confirma, trae y envía los cambios; un conflicto de fusión lista las notas en conflicto y no sobrescribe nada",
+        "Un guardado se rechaza si el archivo cambió en el disco desde que lo abriste, así las ediciones hechas en otro lugar nunca se pisan",
+        "Opcionalmente, indexa una bóveda en la biblioteca de Conocimiento para que los agentes puedan buscar tus notas"
+      ]
+    },
+    "fr": {
+      "displayName": "Notes",
+      "description": "Tiens un carnet en markdown qui vit dans un dépôt git, pour que tes notes soient versionnées, portables et lisibles par n’importe quel autre éditeur. Indique-lui un dépôt GitHub et il en clone une copie de travail, ou rattache un dossier que tu possèdes déjà — y compris un coffre Obsidian existant — et il adopte ce checkout sur place, sans en faire une seconde copie. Les notes s’affichent en texte mis en forme dans lequel tu cliques directement pour l’éditer, les [[wikilinks]] les relient entre elles, et chaque note montre ce qui pointe vers elle. La synchronisation commite, récupère et pousse en une seule étape, et un conflit de fusion est signalé — en listant les notes en conflit et en abandonnant la fusion — au lieu d’écraser quoi que ce soit.",
+      "pageLabel": "Notes",
+      "highlights": [
+        "Tes notes sont du markdown brut dans un dépôt git — aucun verrouillage, lisibles par Obsidian ou tout autre éditeur",
+        "Clone un dépôt GitHub comme coffre, ou rattache un dossier que tu possèdes déjà sans le copier",
+        "Clique sur n’importe quel bloc rendu pour l’éditer sur place ; Enter crée un nouveau bloc, Tab imbrique les listes",
+        "Des [[Wikilinks]] entre les notes, avec une liste de liens entrants indiquant ce qui pointe vers la note que tu lis",
+        "Recherche plein texte dans les titres et le contenu, plus des vues par dossier ou à plat avec six ordres de tri",
+        "La synchronisation en une étape commite, récupère et pousse ; un conflit de fusion liste les notes en conflit et n’écrase rien",
+        "Un enregistrement est refusé si le fichier a changé sur le disque depuis son ouverture, donc les modifications faites ailleurs ne sont jamais écrasées",
+        "Indexe si tu veux un coffre dans la bibliothèque Connaissances pour que les agents puissent chercher dans tes notes"
+      ]
+    },
+    "hi": {
+      "displayName": "नोट्स",
+      "description": "एक markdown नोटबुक रखो जो git रिपॉज़िटरी में रहती है, ताकि तुम्हारे नोट्स वर्शन में रहें, कहीं भी ले जाए जा सकें और किसी भी दूसरे एडिटर में पढ़े जा सकें। इसे किसी GitHub रिपो पर लगाओ और यह वर्किंग कॉपी क्लोन कर लेता है, या पहले से मौजूद कोई फ़ोल्डर जोड़ो — जिसमें कोई पुराना Obsidian वॉल्ट भी शामिल है — और यह उस चेकआउट को वहीं अपना लेता है, दूसरी कॉपी बनाए बिना। नोट्स फ़ॉर्मैट किए टेक्स्ट के रूप में रेंडर होते हैं जिन पर सीधे क्लिक करके संपादन किया जा सकता है, [[wikilinks]] उन्हें जोड़ते हैं, और हर नोट दिखाता है कि उससे कौन जुड़ा है। सिंक एक ही कदम में कमिट, पुल और पुश करता है, और मर्ज कॉन्फ़्लिक्ट होने पर कुछ भी ऊपर लिखने की जगह उसकी सूचना दी जाती है — टकराव वाले नोट्स गिनाकर और मर्ज रोककर।",
+      "pageLabel": "नोट्स",
+      "highlights": [
+        "तुम्हारे नोट्स git रिपो में सादा markdown हैं — कोई लॉक-इन नहीं, Obsidian या किसी भी एडिटर में पढ़े जा सकते हैं",
+        "किसी GitHub रिपो को वॉल्ट के रूप में क्लोन करो, या पहले से मौजूद फ़ोल्डर बिना कॉपी किए जोड़ो",
+        "किसी भी रेंडर हुए ब्लॉक पर क्लिक करके उसे वहीं संपादित करो; Enter नया ब्लॉक शुरू करता है, Tab सूची को अंदर ले जाता है",
+        "नोट्स के बीच [[Wikilinks]], और बैकलिंक सूची दिखाती है कि जो नोट तुम पढ़ रहे हो उस पर कौन इशारा करता है",
+        "शीर्षक और सामग्री में पूर्ण-पाठ खोज, साथ में छह क्रम विकल्पों वाले फ़ोल्डर और सपाट व्यू",
+        "एक कदम वाला सिंक कमिट, पुल और पुश करता है; मर्ज कॉन्फ़्लिक्ट टकराव वाले नोट्स गिनाता है और कुछ भी ऊपर नहीं लिखता",
+        "अगर फ़ाइल खोलने के बाद डिस्क पर बदल गई हो तो सेव मना कर दिया जाता है, ताकि कहीं और किए बदलाव कभी न मिटें",
+        "चाहो तो किसी वॉल्ट को Knowledge लाइब्रेरी में इंडेक्स करो, ताकि एजेंट तुम्हारे नोट्स खोज सकें"
+      ]
+    },
+    "it": {
+      "displayName": "Note",
+      "description": "Tieni un blocco note in markdown che vive in un repository git, così le tue note sono versionate, portabili e leggibili da qualsiasi altro editor. Indicagli un repo GitHub e ne clona una copia di lavoro, oppure collega una cartella che hai già — anche un vault Obsidian esistente — e adotta quel checkout dov’è, senza farne una seconda copia. Le note sono rese come testo formattato su cui puoi cliccare per modificarle subito, i [[wikilinks]] le collegano e ogni nota mostra quali altre note la richiamano. La sincronizzazione fa commit, pull e push in un unico passaggio, e un conflitto di merge viene segnalato — elencando le note in conflitto e annullando il merge — invece di sovrascrivere qualcosa.",
+      "pageLabel": "Note",
+      "highlights": [
+        "Le tue note sono semplice markdown in un repo git — nessun vincolo, leggibili da Obsidian o da qualsiasi editor",
+        "Clona un repo GitHub come vault, oppure collega una cartella che hai già senza copiarla",
+        "Clicca un blocco già formattato per modificarlo sul posto; Enter apre un nuovo blocco, Tab annida gli elenchi",
+        "[[Wikilinks]] tra le note, con un elenco di backlink che mostra cosa punta alla nota che stai leggendo",
+        "Ricerca full-text su titoli e contenuti, più viste a cartelle o piatta con sei criteri di ordinamento",
+        "La sincronizzazione in un passaggio fa commit, pull e push; un conflitto di merge elenca le note in conflitto e non sovrascrive nulla",
+        "Un salvataggio viene rifiutato se il file è cambiato su disco da quando l’hai aperto, così le modifiche fatte altrove non vengono mai schiacciate",
+        "Se vuoi, indicizza un vault nella libreria Conoscenza così gli agenti possono cercare nelle tue note"
+      ]
+    },
+    "ja": {
+      "displayName": "ノート",
+      "description": "git リポジトリに置かれたマークダウンノートブックを保持してください。ノートはバージョン管理され、ポータブルで、他のエディタで読み取り可能です。GitHub リポジトリを指すと、作業コピーがクローンされるか、既存のフォルダーを接続します。既存の Obsidian ボールトなどを含む。フォルダーは 2 番目のコピーを作成せずにその場で採用されます。ノートは、クリックしてすぐに編集できるフォーマット済みテキストとしてレンダリングされます。[[wikilinks]] はそれらを接続し、すべてのノートは何がそれにリンクバックしているかを示します。同期は 1 つのステップでコミット、プル、プッシュを行い、マージ競合は何かを上書きするのではなく、競合するノートを一覧に表示し、マージを中止して報告されます。",
+      "pageLabel": "ノート",
+      "highlights": [
+        "ノートはプレーンマークダウン git リポジトリ内にあります。ロックイン不要、Obsidian または任意のエディタで読み取り可能",
+        "GitHub リポジトリをボールトとしてクローンするか、既存のフォルダーを接続してコピーせずに使用",
+        "レンダリングされた任意のブロックをクリックしてその場で編集。Enter で新しいブロックを開始、Tab でリストをネスト",
+        "[[wikilinks]] ノート間で、ノートを指しているものを示すバックリンクリストを表示",
+        "タイトルとコンテンツ全体を検索でき、フォルダービューとフラットビューの6種類のソート順序に対応しています",
+        "1ステップで同期、プル、プッシュが可能。マージコンフリクトが生じた場合は競合しているノートのリストを表示し、何も上書きしません",
+        "ファイルを開いてから、そのファイルがディスク上で変更された場合、保存は拒否されます。これにより、他の場所で行われた編集が上書きされることはありません",
+        "オプションでボールトをナレッジライブラリにインデックスすると、エージェントはノートを検索できるようになります"
+      ]
+    },
+    "ko": {
+      "displayName": "노트",
+      "description": "Git 저장소에 들어 있는 Markdown 노트북을 관리하여 노트가 버전 관리되고, 이동이 자유롭고, 다른 어떤 편집기에서도 읽힐 수 있게 합니다. GitHub 저장소를 지정하면 작업 사본을 클론하고, 이미 가지고 있는 폴더를 연결하면 — 기존 Obsidian 보관소도 포함해 — 복사본을 만들지 않고 그 체크아웃을 그 자리에서 사용합니다. 노트는 바로 클릭해 편집할 수 있는 서식 있는 텍스트로 렌더링되고, [[wikilinks]]로 서로 연결되며, 모든 노트는 자신을 가리키는 링크를 보여 줍니다. 동기화는 커밋·풀·푸시를 한 번에 처리하고, 병합 충돌이 생기면 아무것도 덮어쓰지 않고 충돌한 노트를 나열하며 병합을 중단해 알려 줍니다.",
+      "pageLabel": "노트",
+      "highlights": [
+        "노트는 Git 저장소 안의 순수 Markdown입니다 — 종속되지 않고 Obsidian이나 어떤 편집기로도 읽을 수 있습니다",
+        "GitHub 저장소를 보관소로 클론하거나, 이미 가지고 있는 폴더를 복사 없이 연결합니다",
+        "렌더링된 블록을 클릭해 그 자리에서 편집합니다. Enter로 새 블록을 시작하고 Tab으로 목록을 중첩합니다",
+        "노트 사이의 [[Wikilinks]], 그리고 읽고 있는 노트를 가리키는 항목을 보여 주는 백링크 목록",
+        "제목과 콘텐츠 전체 검색, 여섯 가지 정렬 순서를 지원하는 폴더 보기와 평면 보기",
+        "한 번의 동기화로 커밋·풀·푸시. 병합 충돌이 생기면 충돌한 노트를 나열하고 아무것도 덮어쓰지 않습니다",
+        "파일을 연 뒤 디스크에서 변경되었다면 저장이 거부되므로, 다른 곳에서 한 편집이 지워지지 않습니다",
+        "보관소를 지식 라이브러리에 선택적으로 인덱싱하면 에이전트가 노트를 검색할 수 있습니다"
+      ]
+    },
+    "pt": {
+      "displayName": "Notas",
+      "description": "Mantenha um caderno em markdown que vive em um repositório git, para que as suas notas fiquem versionadas, portáveis e legíveis por qualquer outro editor. Aponte para um repositório do GitHub e ele clona uma cópia de trabalho, ou anexe uma pasta que você já tem — inclusive um cofre existente do Obsidian — e ele adota esse checkout no lugar, sem criar uma segunda cópia. As notas aparecem como texto formatado em que você clica para editar direto, [[wikilinks]] as conectam e cada nota mostra o que aponta de volta para ela. A sincronização faz commit, pull e push em um passo só, e um conflito de merge é informado — com a lista das notas em conflito e o merge abortado — em vez de sobrescrever qualquer coisa.",
+      "pageLabel": "Notas",
+      "highlights": [
+        "As suas notas são markdown puro em um repositório git — sem aprisionamento, legíveis pelo Obsidian ou por qualquer editor",
+        "Clone um repositório do GitHub como cofre ou anexe uma pasta que você já tem, sem copiá-la",
+        "Clique em qualquer bloco renderizado para editá-lo no lugar; Enter começa um novo bloco, Tab aninha listas",
+        "[[Wikilinks]] entre notas, com uma lista de backlinks mostrando o que aponta para a nota que você está lendo",
+        "Busca em texto completo por títulos e conteúdo, além de visões por pasta e plana com seis ordenações",
+        "A sincronização em um passo faz commit, pull e push; um conflito de merge lista as notas em conflito e não sobrescreve nada",
+        "Um salvamento é recusado se o arquivo mudou no disco desde que você o abriu, para que edições feitas em outro lugar nunca sejam destruídas",
+        "Opcionalmente, indexe um cofre na biblioteca de Conhecimento para que os agentes possam pesquisar as suas notas"
+      ]
+    },
+    "ru": {
+      "displayName": "Заметки",
+      "description": "Ведёт блокнот в markdown, который живёт в репозитории git, поэтому заметки версионируются, переносятся куда угодно и читаются любым другим редактором. Укажи репозиторий GitHub — он склонирует рабочую копию, или подключи уже готовую папку, в том числе существующее хранилище Obsidian, — и он возьмёт эту рабочую копию как есть, не создавая вторую. Заметки отображаются как форматированный текст, в который можно кликнуть и сразу править, [[wikilinks]] связывают их между собой, а у каждой заметки видно, что на неё ссылается. Синхронизация делает коммит, pull и push одним действием, а конфликт слияния будет показан — со списком конфликтных заметок и отменой слияния — и ничего не перезапишет.",
+      "pageLabel": "Заметки",
+      "highlights": [
+        "Заметки — обычный markdown в репозитории git, без привязки к приложению: их прочитает Obsidian или любой редактор",
+        "Склонируй репозиторий GitHub как хранилище или подключи уже готовую папку, не копируя её",
+        "Нажми на любой отрисованный блок, чтобы править его на месте; Enter создаёт новый блок, Tab вкладывает списки",
+        "[[Wikilinks]] между заметками и список обратных ссылок, который показывает, что ссылается на открытую заметку",
+        "Полнотекстовый поиск по заголовкам и содержимому, а также вид по папкам и плоский список с шестью порядками сортировки",
+        "Синхронизация одним действием делает коммит, pull и push; при конфликте слияния показывается список конфликтных заметок и ничего не перезаписывается",
+        "Сохранение отклоняется, если файл изменился на диске после открытия, поэтому правки, сделанные в другом месте, никогда не затираются",
+        "При желании хранилище индексируется в библиотеку знаний, чтобы агенты могли искать по заметкам"
+      ]
+    },
+    "zh-CN": {
+      "displayName": "笔记",
+      "description": "把 markdown 笔记本放在 git 仓库里，笔记因此有版本、可迁移，任何编辑器都读得懂。指向一个 GitHub 仓库，它会克隆一份工作副本；也可以挂上你已有的文件夹 — 包括现成的 Obsidian 仓库 — 它会就地接管那份检出，不再复制第二份。笔记以排版后的文本呈现，点一下就能就地编辑，[[wikilinks]] 把它们连起来，每篇笔记都会显示哪些笔记指向自己。同步一步完成提交、拉取和推送；遇到合并冲突会如实报告 — 列出冲突的笔记并中止合并 — 而不是覆盖任何内容。",
+      "pageLabel": "笔记",
+      "highlights": [
+        "笔记就是 git 仓库里的纯 markdown — 没有锁定，Obsidian 或任何编辑器都能读",
+        "把 GitHub 仓库克隆为笔记仓库，或者直接挂上你已有的文件夹，不做复制",
+        "点击任意渲染后的块即可就地编辑；Enter 新建一个块，Tab 缩进列表",
+        "笔记之间用 [[Wikilinks]] 互联，反向链接列表会显示哪些笔记指向你正在读的这篇",
+        "标题和正文全文搜索，另有文件夹视图和平铺视图，六种排序方式",
+        "一步同步完成提交、拉取和推送；合并冲突会列出冲突的笔记，不覆盖任何内容",
+        "如果文件在你打开后已在磁盘上改动，保存会被拒绝，别处做的修改绝不会被冲掉",
+        "可以选择把笔记仓库索引进知识库，让代理能搜索你的笔记"
+      ]
+    }
+  }
+}

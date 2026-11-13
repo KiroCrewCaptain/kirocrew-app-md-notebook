@@ -1,0 +1,313 @@
+{
+  "app": "md-notebook",
+  "fixture": "minimal",
+  "locale": "en-US",
+  "timezone": "UTC",
+  "provenance_note": "The isolated gateway served the Notes app built into the Kiro Crew checkout (src/kiro_crew/apps/builtins/md_notebook, website/src/apps/md-notebook), because a gateway that still ships the built-in cannot install a second app under the same name. This repository is the externally packaged copy of that app: the same backend and the same page, ported. PORTING.md lists where the two differ; none of the differences is on screen in these pictures.",
+  "data": "fictional: a made-up hiking club notebook, written through the app's own API (see data_notes)",
+  "data_notes": [
+    "capture/demo_vault.py made an empty git folder, /tmp/kc-notes-demo/trail-club-notes, with one empty commit by a made-up author; every note in it was then written through the app's own API (attach the folder, save each note, sync).",
+    "The hiking club, its members' first names and its trails are invented."
+  ],
+  "init_storage": {
+    "mc-nav": "0"
+  },
+  "ready": "text=Spring hike plan",
+  "forbid_text": [
+    "Backend not reachable",
+    "no vault connected",
+    "Something went wrong",
+    "kirocrew-harness-"
+  ],
+  "setup": [
+    {
+      "name": "turn the app on",
+      "method": "POST",
+      "path": "/api/apps/md-notebook/enable"
+    },
+    {
+      "name": "retire the host's one-time startup intro",
+      "method": "POST",
+      "path": "/api/feature-videos/feedback",
+      "body": {
+        "id": "crewmates",
+        "status": "dismissed"
+      },
+      "optional": true
+    },
+    {
+      "wait_ms": 8000
+    },
+    {
+      "name": "the backend answers",
+      "method": "GET",
+      "path": "/apps/md-notebook/api/health"
+    },
+    {
+      "name": "attach the made-up trail club folder as a vault",
+      "method": "POST",
+      "path": "/apps/md-notebook/api/vaults/attach",
+      "body": {
+        "path": "/tmp/kc-notes-demo/trail-club-notes"
+      }
+    },
+    {
+      "name": "write the note Spring hike plan.md",
+      "method": "PUT",
+      "path": "/apps/md-notebook/api/note",
+      "body": {
+        "path": "Spring hike plan.md",
+        "content": "Three Saturdays in April, one trail each. Carpool from the library car park at 8:00.\n\n## Route\n\n| Date | Trail | Distance | Lead |\n|---|---|---|---|\n| Apr 4 | [[Cedar Ridge loop]] | 9 km | Robin |\n| Apr 11 | [[Lake Mira overlook]] | 6 km | Sam |\n| Apr 18 | Fern Hollow falls | 11 km | Alex |\n\n## To do\n\n- [x] Book the minibus\n- [x] Ask the ranger station about trail closures\n- [ ] Print maps for the [[Gear checklist]]\n- [ ] Post the plan on the club board\n\n> Turn back by 14:00 if the cloud comes down over the ridge.\n"
+      }
+    },
+    {
+      "name": "write the note Gear checklist.md",
+      "method": "PUT",
+      "path": "/apps/md-notebook/api/note",
+      "body": {
+        "path": "Gear checklist.md",
+        "content": "What every hiker brings. Spares live in the club cupboard.\n\n- [x] Water, 2 litres\n- [x] Rain jacket\n- [ ] Head torch with fresh batteries\n- [ ] First-aid kit (one per group)\n- [ ] Paper map and compass\n\nUsed on the [[Spring hike plan]].\n"
+      }
+    },
+    {
+      "name": "write the note trails/Cedar Ridge loop.md",
+      "method": "PUT",
+      "path": "/apps/md-notebook/api/note",
+      "body": {
+        "path": "trails/Cedar Ridge loop.md",
+        "content": "A 9 km loop with one steep climb to the fire lookout. Allow four hours.\n\n## Notes from the scout walk\n\n- The bridge at the second creek is fixed again.\n- Waterfall viewpoint is muddy after rain; keep to the boardwalk.\n- Good lunch spot by the lookout, out of the wind.\n\nPlanned for the first Saturday of the [[Spring hike plan]].\n"
+      }
+    },
+    {
+      "name": "write the note trails/Lake Mira overlook.md",
+      "method": "PUT",
+      "path": "/apps/md-notebook/api/note",
+      "body": {
+        "path": "trails/Lake Mira overlook.md",
+        "content": "Short and gentle, good for new members. 6 km out and back.\n\n- Waterfall on the left about 2 km in.\n- Benches at the overlook.\n\nPart of the [[Spring hike plan]].\n"
+      }
+    },
+    {
+      "name": "write the note meetings/March meetup.md",
+      "method": "PUT",
+      "path": "/apps/md-notebook/api/note",
+      "body": {
+        "path": "meetings/March meetup.md",
+        "content": "Twelve members came. We picked the three spring trails and agreed on carpooling.\n\n- Robin leads [[Cedar Ridge loop]]\n- New members start on [[Lake Mira overlook]]\n- Next meetup: first Thursday of May\n"
+      }
+    },
+    {
+      "name": "commit the notes, as Sync does",
+      "method": "POST",
+      "path": "/apps/md-notebook/api/sync",
+      "body": {}
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "hero",
+      "path": "/md-notebook",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "steps": [
+        {
+          "click": ".mdnb-row >> text=Spring hike plan"
+        }
+      ],
+      "ready_after": "text=Turn back by 14:00",
+      "alt": "The Notes page in Kiro Crew: a trail club notebook with meetings and trails folders in the panel on the left, and the note Spring hike plan open on the right, rendered with a route table, a to-do checklist with two items ticked and a list of the three notes that link to it"
+    },
+    {
+      "name": "use-case-edit",
+      "path": "/md-notebook",
+      "themes": [
+        "light"
+      ],
+      "steps": [
+        {
+          "click": ".mdnb-row >> text=Spring hike plan"
+        },
+        {
+          "wait_for": "text=Turn back by 14:00"
+        },
+        {
+          "click": ".mdnb-note >> text=Three Saturdays in April"
+        },
+        {
+          "wait_for": ".mdnb-note textarea"
+        },
+        {
+          "press": ".mdnb-note textarea",
+          "key": "Control+End"
+        },
+        {
+          "type": ".mdnb-note textarea",
+          "value": " Bring a packed lunch.",
+          "keep_caret": true
+        }
+      ],
+      "ready_after": ".mdnb-note textarea",
+      "alt": "The first paragraph of Spring hike plan open for editing in place, with the words Bring a packed lunch just typed at its end, while the rest of the note stays rendered"
+    },
+    {
+      "name": "use-case-links",
+      "path": "/md-notebook",
+      "themes": [
+        "light"
+      ],
+      "steps": [
+        {
+          "click": ".mdnb-row >> text=Cedar Ridge loop"
+        }
+      ],
+      "ready_after": "text=Good lunch spot by the lookout",
+      "alt": "The note Cedar Ridge loop, with a Linked from 2 list at the bottom naming the two notes that link to it: Spring hike plan and meetings/March meetup"
+    },
+    {
+      "name": "use-case-search",
+      "path": "/md-notebook",
+      "themes": [
+        "light"
+      ],
+      "steps": [
+        {
+          "click": ".mdnb-row >> text=Spring hike plan"
+        },
+        {
+          "wait_for": "text=Turn back by 14:00"
+        },
+        {
+          "type": "input.mdnb-search",
+          "value": "waterfall"
+        }
+      ],
+      "ready_after": ".mdnb-row >> text=Lake Mira overlook",
+      "alt": "The word waterfall typed into Search notes, and the panel listing the two notes that contain it: Cedar Ridge loop and Lake Mira overlook"
+    }
+  ],
+  "walkthrough": {
+    "name": "walkthrough",
+    "theme": "light",
+    "path": "/md-notebook",
+    "ready": "text=Spring hike plan",
+    "alt": "A walkthrough of Notes: the Spring hike plan note, ticking a checklist item, clicking the first paragraph and adding a sentence to it, opening Cedar Ridge loop from the list of notes that link to Spring hike plan, then searching every note for waterfall and opening Lake Mira overlook",
+    "steps": [
+      {
+        "click": ".mdnb-row >> text=Spring hike plan"
+      },
+      {
+        "wait_for": "text=Turn back by 14:00"
+      },
+      {
+        "caption": "Your notes are markdown files in a git folder",
+        "position": "top",
+        "offset": 6
+      },
+      {
+        "wait_ms": 2400
+      },
+      {
+        "caption": "Tick a checklist item right in the note",
+        "position": "top",
+        "offset": 6
+      },
+      {
+        "click": ".mdnb-note input[type=checkbox][aria-label^=\"Print maps\"]"
+      },
+      {
+        "wait_ms": 1800
+      },
+      {
+        "caption": "Click any paragraph to edit it",
+        "position": "top",
+        "offset": 6
+      },
+      {
+        "click": ".mdnb-note >> text=Three Saturdays in April"
+      },
+      {
+        "wait_for": ".mdnb-note textarea"
+      },
+      {
+        "press": ".mdnb-note textarea",
+        "key": "Control+End"
+      },
+      {
+        "type": ".mdnb-note textarea",
+        "value": " Bring a packed lunch.",
+        "delay_ms": 90,
+        "keep_caret": true
+      },
+      {
+        "wait_ms": 600
+      },
+      {
+        "press": ".mdnb-note textarea",
+        "key": "Control+Enter"
+      },
+      {
+        "wait_for": "text=Bring a packed lunch."
+      },
+      {
+        "wait_ms": 1600
+      },
+      {
+        "caption": "See every note that links here",
+        "position": "top",
+        "offset": 6
+      },
+      {
+        "hover": "text=trails/Cedar Ridge loop.md"
+      },
+      {
+        "wait_ms": 1200
+      },
+      {
+        "click": "text=trails/Cedar Ridge loop.md"
+      },
+      {
+        "wait_for": "text=Good lunch spot by the lookout"
+      },
+      {
+        "wait_ms": 2400
+      },
+      {
+        "caption": "Search every note",
+        "position": "top",
+        "offset": 6
+      },
+      {
+        "type": "input.mdnb-search",
+        "value": "waterfall",
+        "delay_ms": 110
+      },
+      {
+        "wait_for": ".mdnb-row >> text=Lake Mira overlook"
+      },
+      {
+        "wait_ms": 1800
+      },
+      {
+        "click": ".mdnb-row >> text=Lake Mira overlook"
+      },
+      {
+        "wait_for": "text=Benches at the overlook"
+      },
+      {
+        "wait_ms": 1200
+      },
+      {
+        "mouse_park": [
+          1300,
+          800
+        ]
+      },
+      {
+        "wait_ms": 2000
+      }
+    ],
+    "tail_ms": 2000
+  }
+}

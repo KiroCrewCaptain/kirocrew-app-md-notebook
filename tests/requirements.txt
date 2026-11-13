@@ -1,0 +1,17 @@
+# Test-only dependencies, pinned. Deliberately NOT at the repository root: a root
+# requirements.txt makes a Kiro Crew registry install run pip into the gateway's
+# interpreter (and is refused outright on the desktop build). At runtime the
+# backend needs only the standard library, aiohttp and PyYAML, which the gateway
+# already provides, and the gateway itself.
+#
+# Kiro Crew is a TEST dependency here, pinned to one commit of its public source:
+# the backend reaches the host's own credential fence, redaction, proxy-signature
+# check, git config-hook neutralizer and audit log through backend/_host.py, and
+# the suite exercises those real collaborators the way the built-in's suite did.
+aiohttp==3.14.3
+PyYAML==6.0.3
+pytest==9.0.3
+pytest-asyncio==0.21.2
+pytest-timeout==2.2.0
+flake8==7.1.1
+kirocrew @ https://github.com/kirodotdev/KiroCrew/archive/510ba1b6b8d6e806e53fdcfc7ef0f89d2d9e7758.tar.gz
