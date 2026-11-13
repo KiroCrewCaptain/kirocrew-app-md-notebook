@@ -40,8 +40,9 @@ here.
   operations and their hardening (config-hook neutralizing, the remote and
   git-dir pins, the planted-link refusals), the save guard, the note index,
   search and the auto-sync loop are the built-in's modules line for line:
-  `diff` against them shows only the host bridge, the import paths and the
-  three changes in the table below.
+  `diff` against them shows only the host bridge, the import paths, the
+  script launch at the top of `server.py`, a few comments that named the
+  built-in's paths, and the backend rows of the table below.
 - The page's markup, styles (`ui/src/styles.ts`), keyboard shortcuts and
   behaviour, including every saved preference key in `LS`
   (`ui/src/constants.ts`, pinned against `tests/fixtures/builtin-constants.ts`),
