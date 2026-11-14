@@ -1,0 +1,88 @@
+{
+  "app": "md-notebook",
+  "captured_at": "2026-11-13T05:24:28Z",
+  "app_commit": "4362ce8f53a240cf2a0fc404d53ac6830d23a0f8",
+  "app_tree_dirty": false,
+  "kirocrew_commit": "9c5ecb203b048fafabeee6c10afbc566bfa1cb57",
+  "kirocrew_tree_dirty": false,
+  "gateway": "isolated temporary home, approval=reads; one freshly seeded gateway each for the stub screenshots and the stub walkthrough",
+  "data": "fictional: a made-up hiking club notebook, written through the app's own API (see data_notes)",
+  "agent_backend": {
+    "live": [],
+    "live_model": null,
+    "stub": "Kiro Crew's offline stub ACP backend (capture/stub_backend.py) for every other scene; no chat reply is shown from it",
+    "credit_reading": "the browser answers the top bar's credit readout (/api/sessions/usage) with \"no reading\", so no account balance or email can be shown"
+  },
+  "note": "The isolated gateway served the Notes app built into the Kiro Crew checkout (src/kiro_crew/apps/builtins/md_notebook, website/src/apps/md-notebook), because a gateway that still ships the built-in cannot install a second app under the same name. This repository is the externally packaged copy of that app: the same backend and the same page, ported. PORTING.md lists where the two differ; none of the differences is on screen in these pictures.",
+  "data_notes": [
+    "capture/demo_vault.py made an empty git folder, /tmp/kc-notes-demo/trail-club-notes, with one empty commit by a made-up author; every note in it was then written through the app's own API (attach the folder, save each note, sync).",
+    "The hiking club, its members' first names and its trails are invented."
+  ],
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "device_scale": 2,
+  "screenshots": [
+    {
+      "file": "hero-dark.png",
+      "name": "hero",
+      "theme": "dark",
+      "bytes": 261668,
+      "width": 1600,
+      "height": 1000,
+      "alt": "The Notes page in Kiro Crew: a trail club notebook with meetings and trails folders in the panel on the left, and the note Spring hike plan open on the right, rendered with a route table, a to-do checklist with two items ticked and a list of the three notes that link to it"
+    },
+    {
+      "file": "hero-light.png",
+      "name": "hero",
+      "theme": "light",
+      "bytes": 236695,
+      "width": 1600,
+      "height": 1000,
+      "alt": "The Notes page in Kiro Crew: a trail club notebook with meetings and trails folders in the panel on the left, and the note Spring hike plan open on the right, rendered with a route table, a to-do checklist with two items ticked and a list of the three notes that link to it"
+    },
+    {
+      "file": "use-case-edit-light.png",
+      "name": "use-case-edit",
+      "theme": "light",
+      "bytes": 238833,
+      "width": 1600,
+      "height": 1000,
+      "alt": "The first paragraph of Spring hike plan open for editing in place, with the words Bring a packed lunch just typed at its end, while the rest of the note stays rendered"
+    },
+    {
+      "file": "use-case-links-light.png",
+      "name": "use-case-links",
+      "theme": "light",
+      "bytes": 205905,
+      "width": 1600,
+      "height": 1000,
+      "alt": "The note Cedar Ridge loop, with a Linked from 2 list at the bottom naming the two notes that link to it: Spring hike plan and meetings/March meetup"
+    },
+    {
+      "file": "use-case-search-light.png",
+      "name": "use-case-search",
+      "theme": "light",
+      "bytes": 221139,
+      "width": 1600,
+      "height": 1000,
+      "alt": "The word waterfall typed into Search notes, and the panel listing the two notes that contain it: Cedar Ridge loop and Lake Mira overlook"
+    }
+  ],
+  "walkthrough": {
+    "shortened_waits_s": [],
+    "mp4": {
+      "file": "walkthrough.mp4",
+      "bytes": 332380
+    },
+    "gif": {
+      "file": "walkthrough.gif",
+      "bytes": 2874963,
+      "width": 960,
+      "fps": 10
+    },
+    "theme": "light",
+    "alt": "A walkthrough of Notes: the Spring hike plan note, ticking a checklist item, clicking the first paragraph and adding a sentence to it, opening Cedar Ridge loop from the list of notes that link to Spring hike plan, then searching every note for waterfall and opening Lake Mira overlook"
+  }
+}

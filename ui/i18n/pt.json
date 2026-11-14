@@ -1,0 +1,209 @@
+{
+  "apps": {
+    "mdNotebook": {
+      "badge": {
+        "deleting": "excluindo",
+        "pending": "pendente"
+      },
+      "banner": {
+        "diskConflict": "Esta nota mudou no disco desde que você a abriu.",
+        "keepMine": "Manter minha versão",
+        "staleBackend": "O backend de Notas está executando código mais antigo que esta página — faltando: {{features}}. Desligue e ligue Notas na página de Aplicativos para reiniciá-lo.",
+        "staleBackendRoute": "O backend do Notas está executando um código mais antigo que esta página. Desative e reative o Notas na página de Apps para reiniciá-lo.",
+        "syncConflict": "A sincronização parou num conflito de merge, portanto nada foi enviado. Notas em conflito: {{paths}}",
+        "useDisk": "Usar a versão do disco"
+      },
+      "body": {
+        "backlinks": "Vinculada de {{n}}",
+        "empty": "Selecione uma nota ou crie uma com o botão +."
+      },
+      "boot": {
+        "loading": "Carregando…",
+        "unreachable": "Não foi possível acessar o backend de Notas: {{message}}. Ele pode ainda estar iniciando."
+      },
+      "connect": {
+        "attachAction": "Anexar pasta",
+        "attachHelp": "Usa uma pasta git que você já tem, no lugar — sem uma segunda cópia.",
+        "attachNoRemoteHelp": "Sem remoto git? Também funciona — o vault se comporta da mesma forma e as notas ficam nesta máquina.",
+        "attachTab": "Anexar uma pasta",
+        "attaching": "Anexando…",
+        "branch": "Branch",
+        "cancel": "Cancelar",
+        "choose": "Escolher…",
+        "choosing": "Escolhendo…",
+        "cloneAction": "Conectar cofre",
+        "cloneHelp": "Clona um repositório do GitHub e mantém sua própria cópia de trabalho.",
+        "cloneTab": "Clonar um repositório",
+        "cloning": "Clonando…",
+        "knowledgeFailed": "Cofre conectado, mas a sincronização de conhecimento falhou: {{message}}",
+        "localFolder": "Pasta local",
+        "localFolderPlaceholder": "~/Developer/my-notes",
+        "pickerFailed": "Não foi possível abrir o seletor de pastas: {{message}}",
+        "pickerNeedsMac": "O seletor de pastas precisa do macOS — digite o caminho.",
+        "repoUrl": "URL do repositório",
+        "repoUrlPlaceholder": "https://github.com/you/notes",
+        "subfolder": "Subpasta (opcional)",
+        "subfolderPlaceholder": "notes",
+        "title": "Conectar um cofre",
+        "token": "Token de acesso (opcional)",
+        "tokenPlaceholder": "github_pat_…"
+      },
+      "editor": {
+        "blockAria": "Editar bloco",
+        "renameHint": "Clique para renomear esta nota",
+        "titleAria": "Título da nota"
+      },
+      "header": {
+        "view_raw": "Código Markdown",
+        "view_rendered": "Renderizado"
+      },
+      "knowledge": {
+        "connectHelp": "Adiciona este cofre à biblioteca de Conhecimento para que os agentes possam pesquisar suas notas. Você pode alterar isso depois em {{capabilities}} → {{tab}}.",
+        "label": "Sincronizar com o conhecimento do {{productName}}"
+      },
+      "manifest": {
+        "description": "Mantenha um caderno em markdown que vive em um repositório git, para que as suas notas fiquem versionadas, portáveis e legíveis por qualquer outro editor. Aponte para um repositório do GitHub e ele clona uma cópia de trabalho, ou anexe uma pasta que você já tem — inclusive um cofre existente do Obsidian — e ele adota esse checkout no lugar, sem criar uma segunda cópia. As notas aparecem como texto formatado em que você clica para editar direto, [[wikilinks]] as conectam e cada nota mostra o que aponta de volta para ela. A sincronização faz commit, pull e push em um passo só, e um conflito de merge é informado — com a lista das notas em conflito e o merge abortado — em vez de sobrescrever qualquer coisa.",
+        "display_name": "Notas",
+        "highlight_1": "As suas notas são markdown puro em um repositório git — sem aprisionamento, legíveis pelo Obsidian ou por qualquer editor",
+        "highlight_2": "Clone um repositório do GitHub como cofre ou anexe uma pasta que você já tem, sem copiá-la",
+        "highlight_3": "Clique em qualquer bloco renderizado para editá-lo no lugar; Enter começa um novo bloco, Tab aninha listas",
+        "highlight_4": "[[Wikilinks]] entre notas, com uma lista de backlinks mostrando o que aponta para a nota que você está lendo",
+        "highlight_5": "Busca em texto completo por títulos e conteúdo, além de visões por pasta e plana com seis ordenações",
+        "highlight_6": "A sincronização em um passo faz commit, pull e push; um conflito de merge lista as notas em conflito e não sobrescreve nada",
+        "highlight_7": "Um salvamento é recusado se o arquivo mudou no disco desde que você o abriu, para que edições feitas em outro lugar nunca sejam destruídas",
+        "highlight_8": "Opcionalmente, indexe um cofre na biblioteca de Conhecimento para que os agentes possam pesquisar as suas notas",
+        "page_label": "Notas",
+        "use_case_1": "Edite um vault Markdown portátil com wikilinks, backlinks, pesquisa, histórico do Git e indexação opcional no Knowledge.",
+        "configuration_1": "Clone um repositório Git ou anexe uma pasta local existente e, se quiser, ative o Knowledge e a sincronização agendada; clones privados do GitHub precisam de um PAT ou do gh autenticado."
+      },
+      "panel": {
+        "connectVault": "Conectar um cofre",
+        "hide": "Ocultar o painel de notas",
+        "newRootNote": "Nova nota no nível superior",
+        "noMatches": "Nenhum resultado",
+        "searchPlaceholder": "Pesquisar notas",
+        "show": "Mostrar o painel de notas",
+        "sortAndView": "Ordem e visualização",
+        "sortSection": "Ordenar por",
+        "switchVault": "Trocar de cofre",
+        "vaults": "Cofres",
+        "viewSection": "Visualização",
+        "view_folders": "Pastas",
+        "view_list": "Lista simples"
+      },
+      "preview": {
+        "detailsSummaryFallback": "Detalhes",
+        "mermaidError": "Diagrama Mermaid inválido — mostrando o código-fonte."
+      },
+      "row": {
+        "delete": "Excluir nota",
+        "deleteAction": "Excluir",
+        "deleteConfirm": "Você pode restaurá-la de <trash>.trash</trash>. Notas na lixeira não são sincronizadas com o remoto.",
+        "deleteTitle": "Mover “{{title}}” para a lixeira?",
+        "duplicate": "Duplicar nota",
+        "pin": "Fixar nota",
+        "rename": "Renomear nota",
+        "renameField": "Nome da nota",
+        "unpin": "Desafixar nota"
+      },
+      "settings": {
+        "active": "Ativo",
+        "authGh": "Usando seu login do GitHub CLI.",
+        "authNone": "Sem acesso ao GitHub — adicione um token para sincronizar repositórios privados.",
+        "authStored": "Usando um token salvo neste aplicativo.",
+        "autoCommit": "Salvamento automático no histórico",
+        "autoCommitHelp": "Faz commit das suas alterações no histórico git local do vault a cada {{n}} minutos, assim você nunca precisa salvar manualmente. Nada é enviado para um remoto.",
+        "autoSync": "Sincronização automática",
+        "autoSyncHelp": "Envia suas alterações ao GitHub e traz as mais recentes, por temporizador. Continua em segundo plano quando o Notes está fechado, desde que o {{productName}} esteja aberto. Pausada enquanto um conflito precisa da sua decisão.",
+        "badgeCloned": "Clonado",
+        "badgeLocal": "Pasta local",
+        "clear": "Limpar",
+        "close": "Fechar configurações",
+        "every": "A cada",
+        "githubSection": "Acesso ao GitHub",
+        "intervalAria": "Intervalo de sincronização automática em minutos",
+        "knowledgeAdded": "Adicionado ao Conhecimento.",
+        "knowledgeAddedCount_one": "Adicionado ao Conhecimento — {{n}} arquivo na fila de indexação.",
+        "knowledgeAddedCount_many": "Adicionado ao Conhecimento — {{n}} de arquivos na fila de indexação.",
+        "knowledgeAddedCount_other": "Adicionado ao Conhecimento — {{n}} arquivos na fila de indexação.",
+        "knowledgeAdding": "Adicionando ao Conhecimento…",
+        "knowledgeIndexed": "Indexado na biblioteca de Conhecimento — os agentes podem pesquisar estas notas.",
+        "knowledgeNotIndexed": "Não indexado. Ative para que os agentes pesquisem neste cofre.",
+        "knowledgeRemoved": "Removido do Conhecimento.",
+        "knowledgeRemoving": "Removendo do Conhecimento…",
+        "minutes": "minutos",
+        "noRemote": "Sem remoto",
+        "open": "Abrir",
+        "prefsSaveFailed": "Não foi possível salvar a configuração de sincronização: {{message}}",
+        "recording": "Gravando…",
+        "remove": "Remover",
+        "removeConfirm": "Remover este cofre do aplicativo? Seus arquivos permanecem intactos no disco — apenas a conexão é esquecida.",
+        "removeFailed": "Não foi possível remover o cofre: {{message}}",
+        "removeIt": "Remover",
+        "reset": "Redefinir",
+        "save": "Salvar",
+        "shortcut": "Atalho de sincronização manual",
+        "shortcutHelpIdle": "Clique para gravar um novo atalho.",
+        "shortcutHelpRecording": "Pressione as teclas desejadas — Esc para cancelar.",
+        "shortcutNeedsModifier": "Use ao menos ⌘, Ctrl ou ⌥ — uma letra sozinha dispararia ao digitar.",
+        "subtitle": "Cofres, acesso ao GitHub e sincronização",
+        "syncSection": "Sincronização",
+        "title": "Configurações",
+        "tokenCleared": "Token limpo.",
+        "tokenClearFailed": "Não foi possível limpar o token: {{message}}",
+        "tokenPlaceholderEmpty": "github_pat_…",
+        "tokenPlaceholderStored": "Substituir o token salvo…",
+        "tokenSaved": "Token salvo.",
+        "tokenSaveFailed": "Não foi possível salvar o token: {{message}}",
+        "vaultsSection": "Cofres"
+      },
+      "sort": {
+        "createdNewOld": "Criação — da mais nova para a mais antiga",
+        "createdOldNew": "Criação — da mais antiga para a mais nova",
+        "modifiedNewOld": "Modificação — da mais nova para a mais antiga",
+        "modifiedOldNew": "Modificação — da mais antiga para a mais nova",
+        "nameAZ": "Nome do arquivo — de A a Z",
+        "nameZA": "Nome do arquivo — de Z a A"
+      },
+      "sync": {
+        "action": "Sincronizar",
+        "ago_d": "Sincronizado há {{n}} d",
+        "ago_h": "Sincronizado há {{n}} h",
+        "ago_m": "Sincronizado há {{n}} min",
+        "justNow": "Sincronizado agora",
+        "localAction": "Salvar localmente",
+        "localTitle": "Faz commit das alterações no histórico git local deste vault. Este vault não tem remoto, então nada é enviado.",
+        "syncing": "Sincronizando"
+      },
+      "title": "Notas",
+      "trash": {
+        "empty": "Nada foi excluído deste vault ainda, então não existe uma pasta .trash.",
+        "failed": "Não foi possível abrir a pasta: {{message}}",
+        "open": "Abrir a pasta .trash",
+        "unsupported": "Abrir uma pasta não é compatível com este sistema."
+      }
+    }
+  },
+  "api": {
+    "client": {
+      "proxy_challenge_framed": "Abra {{origin}} em uma nova aba: se aparecer uma página de login, a sessão do seu proxy de acesso expirou. Dentro deste painel não funciona. Entre por lá e depois recarregue esta página.",
+      "proxy_challenge_reload": "Recarregue esta aba do navegador: se aparecer uma página de login, a sessão do seu proxy de acesso expirou. Caso contrário, um proxy ou firewall na frente deste painel recusou a solicitação; verifique os logs do proxy ou tente de novo mais tarde."
+    }
+  },
+  "nav": {
+    "agent_capabilities": "Personalizar",
+    "mcp_servers": "Servidores MCP"
+  },
+  "pages": {
+    "capabilitiesPage": {
+      "knowledge_label": "Conhecimento",
+      "skills_label": "Habilidades"
+    }
+  },
+  "components": {
+    "readingWidthToggle": {
+      "title_md": "Largura média",
+      "title_full": "Largura total"
+    }
+  }
+}

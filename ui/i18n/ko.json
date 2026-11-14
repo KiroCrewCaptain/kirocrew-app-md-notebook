@@ -1,0 +1,207 @@
+{
+  "apps": {
+    "mdNotebook": {
+      "badge": {
+        "deleting": "삭제 중",
+        "pending": "대기 중"
+      },
+      "banner": {
+        "diskConflict": "이 노트는 연 이후 디스크에서 변경되었습니다.",
+        "keepMine": "내 버전 유지",
+        "staleBackend": "노트 백엔드가 이 페이지보다 오래된 코드를 실행하고 있습니다 — 누락: {{features}}. 앱 페이지에서 노트를 껐다 켜서 다시 시작하세요.",
+        "staleBackendRoute": "노트 백엔드가 이 페이지보다 오래된 코드를 실행하고 있습니다. 앱 페이지에서 노트를 껐다가 다시 켜서 재시작하세요.",
+        "syncConflict": "병합 충돌로 동기화가 중단되어 아무것도 푸시되지 않았습니다. 충돌한 노트: {{paths}}",
+        "useDisk": "디스크의 버전 사용"
+      },
+      "body": {
+        "backlinks": "{{n}}에서 링크됨",
+        "empty": "노트를 선택하거나 + 버튼으로 새로 만드세요."
+      },
+      "boot": {
+        "loading": "불러오는 중…",
+        "unreachable": "노트 백엔드에 연결할 수 없습니다: {{message}}. 아직 시작 중일 수 있습니다."
+      },
+      "connect": {
+        "attachAction": "폴더 연결",
+        "attachHelp": "이미 가지고 있는 Git 폴더를 그 자리에서 사용합니다 — 복사본을 만들지 않습니다.",
+        "attachNoRemoteHelp": "Git 원격이 없나요? 그래도 됩니다 — 보관소는 동일하게 동작하고 노트는 이 컴퓨터에 남습니다.",
+        "attachTab": "폴더 연결",
+        "attaching": "연결 중…",
+        "branch": "브랜치",
+        "cancel": "취소",
+        "choose": "선택…",
+        "choosing": "선택 중…",
+        "cloneAction": "보관소 연결",
+        "cloneHelp": "GitHub 저장소를 클론하고 자체 작업 사본을 유지합니다.",
+        "cloneTab": "저장소 클론",
+        "cloning": "클론 중…",
+        "knowledgeFailed": "보관소를 연결했지만 지식 동기화에 실패했습니다: {{message}}",
+        "localFolder": "로컬 폴더",
+        "localFolderPlaceholder": "~/Developer/my-notes",
+        "pickerFailed": "폴더 선택기를 열 수 없습니다: {{message}}",
+        "pickerNeedsMac": "폴더 선택기는 macOS가 필요합니다 — 대신 경로를 입력하세요.",
+        "repoUrl": "저장소 URL",
+        "repoUrlPlaceholder": "https://github.com/you/notes",
+        "subfolder": "하위 폴더 (선택 사항)",
+        "subfolderPlaceholder": "notes",
+        "title": "보관소 연결",
+        "token": "액세스 토큰 (선택 사항)",
+        "tokenPlaceholder": "github_pat_…"
+      },
+      "editor": {
+        "blockAria": "블록 편집",
+        "renameHint": "클릭하여 이 노트의 이름 변경",
+        "titleAria": "노트 제목"
+      },
+      "header": {
+        "view_raw": "Markdown 원본",
+        "view_rendered": "렌더링됨"
+      },
+      "knowledge": {
+        "connectHelp": "이 보관소를 지식 라이브러리에 추가하여 에이전트가 노트를 검색할 수 있게 합니다. 나중에 {{capabilities}} → {{tab}}에서 변경할 수 있습니다.",
+        "label": "{{productName}} 지식과 동기화"
+      },
+      "manifest": {
+        "use_case_1": "위키링크, 백링크, 검색, Git 기록, 선택적 Knowledge 인덱싱을 지원하는 이식 가능한 Markdown 보관소를 편집합니다.",
+        "configuration_1": "Git 저장소를 클론하거나 기존 로컬 폴더를 연결한 다음, 필요하면 Knowledge와 정기 동기화를 활성화하세요. 비공개 GitHub 저장소를 클론하려면 PAT 또는 인증된 gh가 필요합니다.",
+        "description": "Git 저장소에 들어 있는 Markdown 노트북을 관리하여 노트가 버전 관리되고, 이동이 자유롭고, 다른 어떤 편집기에서도 읽힐 수 있게 합니다. GitHub 저장소를 지정하면 작업 사본을 클론하고, 이미 가지고 있는 폴더를 연결하면 — 기존 Obsidian 보관소도 포함해 — 복사본을 만들지 않고 그 체크아웃을 그 자리에서 사용합니다. 노트는 바로 클릭해 편집할 수 있는 서식 있는 텍스트로 렌더링되고, [[wikilinks]]로 서로 연결되며, 모든 노트는 자신을 가리키는 링크를 보여 줍니다. 동기화는 커밋·풀·푸시를 한 번에 처리하고, 병합 충돌이 생기면 아무것도 덮어쓰지 않고 충돌한 노트를 나열하며 병합을 중단해 알려 줍니다.",
+        "display_name": "노트",
+        "highlight_1": "노트는 Git 저장소 안의 순수 Markdown입니다 — 종속되지 않고 Obsidian이나 어떤 편집기로도 읽을 수 있습니다",
+        "highlight_2": "GitHub 저장소를 보관소로 클론하거나, 이미 가지고 있는 폴더를 복사 없이 연결합니다",
+        "highlight_3": "렌더링된 블록을 클릭해 그 자리에서 편집합니다. Enter로 새 블록을 시작하고 Tab으로 목록을 중첩합니다",
+        "highlight_4": "노트 사이의 [[Wikilinks]], 그리고 읽고 있는 노트를 가리키는 항목을 보여 주는 백링크 목록",
+        "highlight_5": "제목과 콘텐츠 전체 검색, 여섯 가지 정렬 순서를 지원하는 폴더 보기와 평면 보기",
+        "highlight_6": "한 번의 동기화로 커밋·풀·푸시. 병합 충돌이 생기면 충돌한 노트를 나열하고 아무것도 덮어쓰지 않습니다",
+        "highlight_7": "파일을 연 뒤 디스크에서 변경되었다면 저장이 거부되므로, 다른 곳에서 한 편집이 지워지지 않습니다",
+        "highlight_8": "보관소를 지식 라이브러리에 선택적으로 인덱싱하면 에이전트가 노트를 검색할 수 있습니다",
+        "page_label": "노트"
+      },
+      "panel": {
+        "connectVault": "보관소 연결",
+        "hide": "노트 패널 숨기기",
+        "newRootNote": "최상위에 새 노트",
+        "noMatches": "일치하는 항목 없음",
+        "searchPlaceholder": "노트 검색",
+        "show": "노트 패널 표시",
+        "sortAndView": "정렬 및 보기",
+        "sortSection": "정렬 기준",
+        "switchVault": "보관소 전환",
+        "vaults": "보관소",
+        "viewSection": "보기",
+        "view_folders": "폴더",
+        "view_list": "평면 목록"
+      },
+      "preview": {
+        "detailsSummaryFallback": "세부 정보",
+        "mermaidError": "잘못된 Mermaid 다이어그램 — 소스를 표시합니다."
+      },
+      "row": {
+        "delete": "노트 삭제",
+        "deleteAction": "삭제",
+        "deleteConfirm": "<trash>.trash</trash>에서 복원할 수 있습니다. 휴지통에 있는 노트는 원격에 동기화되지 않습니다.",
+        "deleteTitle": "‘{{title}}’을(를) 휴지통으로 옮기시겠습니까?",
+        "duplicate": "노트 복제",
+        "pin": "노트 고정",
+        "rename": "노트 이름 변경",
+        "renameField": "노트 이름",
+        "unpin": "노트 고정 해제"
+      },
+      "settings": {
+        "active": "활성",
+        "authGh": "GitHub CLI 로그인을 사용하고 있습니다.",
+        "authNone": "GitHub 액세스 없음 — 비공개 저장소를 동기화하려면 토큰을 추가하세요.",
+        "authStored": "이 앱에 저장된 토큰을 사용하고 있습니다.",
+        "autoCommit": "히스토리에 자동 저장",
+        "autoCommitHelp": "{{n}}분마다 편집 내용을 보관소의 로컬 Git 히스토리에 커밋하므로 직접 저장할 필요가 없습니다. 원격에는 아무것도 푸시되지 않습니다.",
+        "autoSync": "자동 동기화",
+        "autoSyncHelp": "일정한 간격으로 변경 내용을 GitHub에 푸시하고 최신 내용을 가져옵니다. Notes를 닫아도 {{productName}}이(가) 실행 중이면 백그라운드에서 계속 동작합니다. 충돌에 대한 결정이 필요하면 일시 중지됩니다.",
+        "badgeCloned": "클론됨",
+        "badgeLocal": "로컬 폴더",
+        "clear": "지우기",
+        "close": "설정 닫기",
+        "every": "매",
+        "githubSection": "GitHub 액세스",
+        "intervalAria": "자동 동기화 간격(분)",
+        "knowledgeAdded": "지식에 추가되었습니다.",
+        "knowledgeAddedCount_other": "지식에 추가되었습니다 — 파일 {{n}}개가 인덱싱 대기 중입니다.",
+        "knowledgeAdding": "지식에 추가 중…",
+        "knowledgeIndexed": "지식 라이브러리에 인덱싱되었습니다 — 에이전트가 이 노트를 검색할 수 있습니다.",
+        "knowledgeNotIndexed": "인덱싱되지 않았습니다. 켜면 에이전트가 이 보관소를 검색할 수 있습니다.",
+        "knowledgeRemoved": "지식에서 제거되었습니다.",
+        "knowledgeRemoving": "지식에서 제거 중…",
+        "minutes": "분",
+        "noRemote": "원격 없음",
+        "open": "열기",
+        "prefsSaveFailed": "동기화 설정을 저장할 수 없습니다: {{message}}",
+        "recording": "기록 중…",
+        "remove": "제거",
+        "removeConfirm": "이 보관소를 앱에서 제거하시겠습니까? 파일은 디스크에 그대로 남습니다 — 연결 정보만 잊힙니다.",
+        "removeFailed": "보관소를 제거할 수 없습니다: {{message}}",
+        "removeIt": "제거",
+        "reset": "초기화",
+        "save": "저장",
+        "shortcut": "수동 동기화 바로 가기",
+        "shortcutHelpIdle": "클릭하여 새 바로 가기를 기록하세요.",
+        "shortcutHelpRecording": "사용할 키를 누르세요 — 취소는 Esc입니다.",
+        "shortcutNeedsModifier": "⌘, Ctrl, ⌥ 중 적어도 하나를 사용하세요 — 일반 문자만 쓰면 입력 중에 실행됩니다.",
+        "subtitle": "보관소, GitHub 액세스 및 동기화",
+        "syncSection": "동기화",
+        "title": "설정",
+        "tokenCleared": "토큰을 지웠습니다.",
+        "tokenClearFailed": "토큰을 지울 수 없습니다: {{message}}",
+        "tokenPlaceholderEmpty": "github_pat_…",
+        "tokenPlaceholderStored": "저장된 토큰 교체…",
+        "tokenSaved": "토큰을 저장했습니다.",
+        "tokenSaveFailed": "토큰을 저장할 수 없습니다: {{message}}",
+        "vaultsSection": "보관소"
+      },
+      "sort": {
+        "createdNewOld": "생성 — 최신순",
+        "createdOldNew": "생성 — 오래된순",
+        "modifiedNewOld": "수정 — 최신순",
+        "modifiedOldNew": "수정 — 오래된순",
+        "nameAZ": "파일 이름 — A에서 Z",
+        "nameZA": "파일 이름 — Z에서 A"
+      },
+      "sync": {
+        "action": "동기화",
+        "ago_d": "{{n}}일 전에 동기화",
+        "ago_h": "{{n}}시간 전에 동기화",
+        "ago_m": "{{n}}분 전에 동기화",
+        "justNow": "방금 동기화",
+        "localAction": "로컬에 저장",
+        "localTitle": "변경 내용을 이 보관소의 로컬 Git 히스토리에 커밋합니다. 이 보관소에는 원격이 없으므로 아무것도 푸시되지 않습니다.",
+        "syncing": "동기화 중"
+      },
+      "title": "노트",
+      "trash": {
+        "empty": "이 보관소에서 아직 삭제된 것이 없으므로 .trash 폴더가 없습니다.",
+        "failed": "폴더를 열 수 없습니다: {{message}}",
+        "open": ".trash 폴더 열기",
+        "unsupported": "이 시스템에서는 폴더 열기를 지원하지 않습니다."
+      }
+    }
+  },
+  "api": {
+    "client": {
+      "proxy_challenge_framed": "새 탭에서 {{origin}} 을 여세요. 로그인 페이지가 나타나면 액세스 프록시 세션이 만료된 것입니다. 이 패널 안에서는 로그인할 수 없습니다. 거기서 로그인한 뒤 이 페이지를 다시 로드하세요.",
+      "proxy_challenge_reload": "이 브라우저 탭을 다시 로드하세요. 로그인 페이지가 나타나면 액세스 프록시 세션이 만료된 것입니다. 그렇지 않다면 이 대시보드 앞단의 프록시나 방화벽이 요청을 거부한 것이니, 프록시 로그를 확인하거나 나중에 다시 시도하세요."
+    }
+  },
+  "nav": {
+    "agent_capabilities": "맞춤 설정",
+    "mcp_servers": "MCP 서버"
+  },
+  "pages": {
+    "capabilitiesPage": {
+      "knowledge_label": "지식",
+      "skills_label": "스킬"
+    }
+  },
+  "components": {
+    "readingWidthToggle": {
+      "title_md": "중간 너비",
+      "title_full": "전체 너비"
+    }
+  }
+}

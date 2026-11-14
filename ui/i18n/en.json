@@ -1,0 +1,208 @@
+{
+  "apps": {
+    "mdNotebook": {
+      "badge": {
+        "deleting": "deleting",
+        "pending": "pending"
+      },
+      "banner": {
+        "diskConflict": "This note changed on disk since you opened it.",
+        "keepMine": "Keep my version",
+        "staleBackend": "The Notes backend is running older code than this page — missing: {{features}}. Toggle Notes off and on in the Apps page to restart it.",
+        "staleBackendRoute": "The Notes backend is running older code than this page. Toggle Notes off and on in the Apps page to restart it.",
+        "syncConflict": "Sync stopped on a merge conflict, so nothing was pushed. Conflicting notes: {{paths}}",
+        "useDisk": "Use the version on disk"
+      },
+      "body": {
+        "backlinks": "Linked from {{n}}",
+        "empty": "Select a note, or create one with the + button."
+      },
+      "boot": {
+        "loading": "Loading…",
+        "unreachable": "Could not reach the Notes backend: {{message}}. It may still be starting."
+      },
+      "connect": {
+        "attachAction": "Attach folder",
+        "attachHelp": "Uses a git folder you already have, in place — no second copy.",
+        "attachNoRemoteHelp": "No git remote? That works too — the vault behaves the same and the notes stay on this machine.",
+        "attachTab": "Attach a folder",
+        "attaching": "Attaching…",
+        "branch": "Branch",
+        "cancel": "Cancel",
+        "choose": "Choose…",
+        "choosing": "Choosing…",
+        "cloneAction": "Connect vault",
+        "cloneHelp": "Clones a GitHub repository and keeps its own working copy.",
+        "cloneTab": "Clone a repo",
+        "cloning": "Cloning…",
+        "knowledgeFailed": "Vault connected, but knowledge sync failed: {{message}}",
+        "localFolder": "Local folder",
+        "localFolderPlaceholder": "~/Developer/my-notes",
+        "pickerFailed": "Could not open the folder chooser: {{message}}",
+        "pickerNeedsMac": "Folder chooser needs macOS — type the path instead.",
+        "repoUrl": "Repository URL",
+        "repoUrlPlaceholder": "https://github.com/you/notes",
+        "subfolder": "Subfolder (optional)",
+        "subfolderPlaceholder": "notes",
+        "title": "Connect a vault",
+        "token": "Access token (optional)",
+        "tokenPlaceholder": "github_pat_…"
+      },
+      "editor": {
+        "blockAria": "Edit block",
+        "renameHint": "Click to rename this note",
+        "titleAria": "Note title"
+      },
+      "header": {
+        "view_raw": "Markdown source",
+        "view_rendered": "Rendered"
+      },
+      "knowledge": {
+        "connectHelp": "Adds this vault to the Knowledge library so agents can search your notes. You can change this later in {{capabilities}} → {{tab}}.",
+        "label": "Sync to {{productName}} knowledge"
+      },
+      "manifest": {
+        "description": "Keep a markdown notebook that lives in a git repository, so your notes are versioned, portable, and readable by any other editor. Point it at a GitHub repo and it clones a working copy, or attach a folder you already have — including an existing Obsidian vault — and it adopts that checkout in place without making a second copy. Notes render as formatted text you can click straight into to edit, [[wikilinks]] connect them, and every note shows what links back to it. Sync commits, pulls and pushes in one step, and a merge conflict is reported — listing the conflicted notes and aborting the merge — rather than overwriting anything.",
+        "display_name": "Notes",
+        "highlight_1": "Your notes are plain markdown in a git repo — no lock-in, readable by Obsidian or any editor",
+        "highlight_2": "Clone a GitHub repo as a vault, or attach a folder you already have without copying it",
+        "highlight_3": "Click any rendered block to edit it in place; Enter starts a new block, Tab nests lists",
+        "highlight_4": "[[Wikilinks]] between notes, with a backlinks list showing what points at the note you are reading",
+        "highlight_5": "Full-text search across titles and content, plus folder and flat views with six sort orders",
+        "highlight_6": "One-step sync commits, pulls and pushes; a merge conflict lists the conflicted notes and overwrites nothing",
+        "highlight_7": "A save is refused if the file changed on disk since you opened it, so edits made elsewhere are never clobbered",
+        "highlight_8": "Optionally index a vault into the Knowledge library so agents can search your notes",
+        "page_label": "Notes",
+        "use_case_1": "Edit a portable Markdown vault with wikilinks, backlinks, search, Git history, and optional Knowledge indexing.",
+        "configuration_1": "Clone a Git repository or attach an existing local folder, then optionally enable Knowledge and scheduled sync; private GitHub clones need a PAT or authenticated gh."
+      },
+      "panel": {
+        "connectVault": "Connect a vault",
+        "hide": "Hide notes panel",
+        "newRootNote": "New note at the top level",
+        "noMatches": "No matches",
+        "searchPlaceholder": "Search notes",
+        "show": "Show notes panel",
+        "sortAndView": "Sort and view",
+        "sortSection": "Sort by",
+        "switchVault": "Switch vault",
+        "vaults": "Vaults",
+        "viewSection": "View",
+        "view_folders": "Folders",
+        "view_list": "Flat list"
+      },
+      "preview": {
+        "detailsSummaryFallback": "Details",
+        "mermaidError": "Invalid Mermaid diagram — showing its source."
+      },
+      "row": {
+        "delete": "Delete note",
+        "deleteAction": "Delete",
+        "deleteTitle": "Move “{{title}}” to trash?",
+        "duplicate": "Duplicate note",
+        "pin": "Pin note",
+        "rename": "Rename note",
+        "renameField": "Note name",
+        "unpin": "Unpin note",
+        "deleteConfirm": "You can restore it from <trash>.trash</trash>. Trashed notes aren't synced to the remote."
+      },
+      "settings": {
+        "active": "Active",
+        "authGh": "Using your GitHub CLI login.",
+        "authNone": "No GitHub access — add a token to sync private repositories.",
+        "authStored": "Using a token stored in this app.",
+        "autoCommit": "Autosave to history",
+        "autoCommitHelp": "Commits your edits to the vault's local git history every {{n}} minutes, so you never have to save by hand. Nothing is pushed to a remote.",
+        "autoSync": "Auto sync",
+        "autoSyncHelp": "Pushes your changes to GitHub and pulls the latest, on a timer. Keeps running in the background when Notes is closed, as long as {{productName}} is open. Paused while a conflict needs your decision.",
+        "badgeCloned": "Cloned",
+        "badgeLocal": "Local folder",
+        "clear": "Clear",
+        "close": "Close settings",
+        "every": "Every",
+        "githubSection": "GitHub access",
+        "intervalAria": "Auto sync interval in minutes",
+        "knowledgeAdded": "Added to Knowledge.",
+        "knowledgeAddedCount_one": "Added to Knowledge — {{n}} file queued for indexing.",
+        "knowledgeAddedCount_other": "Added to Knowledge — {{n}} files queued for indexing.",
+        "knowledgeAdding": "Adding to Knowledge…",
+        "knowledgeIndexed": "Indexed in the Knowledge library — agents can search these notes.",
+        "knowledgeNotIndexed": "Not indexed. Turn on to let agents search this vault.",
+        "knowledgeRemoved": "Removed from Knowledge.",
+        "knowledgeRemoving": "Removing from Knowledge…",
+        "minutes": "minutes",
+        "noRemote": "No remote",
+        "open": "Open",
+        "prefsSaveFailed": "Could not save the sync setting: {{message}}",
+        "recording": "Recording…",
+        "remove": "Remove",
+        "removeConfirm": "Remove this vault from the app? Your files are left untouched on disk — only the connection is forgotten.",
+        "removeFailed": "Could not remove the vault: {{message}}",
+        "removeIt": "Remove it",
+        "reset": "Reset",
+        "save": "Save",
+        "shortcut": "Manual sync shortcut",
+        "shortcutHelpIdle": "Click to record a new shortcut.",
+        "shortcutHelpRecording": "Press the keys you want to use — Esc to cancel.",
+        "shortcutNeedsModifier": "Use at least one of ⌘, Ctrl or ⌥ — a plain letter would fire while you type.",
+        "subtitle": "Vaults, GitHub access and sync",
+        "syncSection": "Sync",
+        "title": "Settings",
+        "tokenCleared": "Token cleared.",
+        "tokenClearFailed": "Could not clear the token: {{message}}",
+        "tokenPlaceholderEmpty": "github_pat_…",
+        "tokenPlaceholderStored": "Replace stored token…",
+        "tokenSaved": "Token saved.",
+        "tokenSaveFailed": "Could not save the token: {{message}}",
+        "vaultsSection": "Vaults"
+      },
+      "sort": {
+        "createdNewOld": "Created — new to old",
+        "createdOldNew": "Created — old to new",
+        "modifiedNewOld": "Modified — new to old",
+        "modifiedOldNew": "Modified — old to new",
+        "nameAZ": "File name — A to Z",
+        "nameZA": "File name — Z to A"
+      },
+      "sync": {
+        "action": "Sync",
+        "ago_d": "Synced {{n}}d ago",
+        "ago_h": "Synced {{n}}h ago",
+        "ago_m": "Synced {{n}}m ago",
+        "justNow": "Synced just now",
+        "localAction": "Save locally",
+        "localTitle": "Commit changes to this vault's local git history. This vault has no remote, so nothing is pushed.",
+        "syncing": "Syncing"
+      },
+      "title": "Notes",
+      "trash": {
+        "empty": "Nothing has been deleted from this vault yet, so there is no .trash folder.",
+        "failed": "Could not open the folder: {{message}}",
+        "open": "Open the .trash folder",
+        "unsupported": "Opening a folder is not supported on this system."
+      }
+    }
+  },
+  "api": {
+    "client": {
+      "proxy_challenge_framed": "Open {{origin}} in a new tab — if a sign-in page appears, your access proxy’s session expired. Signing in inside this panel won’t work. Sign in there, then reload this page.",
+      "proxy_challenge_reload": "Reload this browser tab — if a sign-in page appears, your access proxy’s session expired. If not, a proxy or firewall in front of this dashboard refused the request; check the proxy’s logs, or retry later."
+    }
+  },
+  "nav": {
+    "agent_capabilities": "Customize",
+    "mcp_servers": "MCP Servers"
+  },
+  "pages": {
+    "capabilitiesPage": {
+      "knowledge_label": "Knowledge",
+      "skills_label": "Skills"
+    }
+  },
+  "components": {
+    "readingWidthToggle": {
+      "title_md": "Medium width",
+      "title_full": "Full width"
+    }
+  }
+}

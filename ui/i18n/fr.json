@@ -1,0 +1,209 @@
+{
+  "apps": {
+    "mdNotebook": {
+      "badge": {
+        "deleting": "suppression",
+        "pending": "en attente"
+      },
+      "banner": {
+        "diskConflict": "Cette note a changé sur le disque depuis son ouverture.",
+        "keepMine": "Conserver ma version",
+        "staleBackend": "Le backend Notes exécute un code plus ancien que cette page — manquant : {{features}}. Désactivez puis réactivez Notes dans la page Applications pour le redémarrer.",
+        "staleBackendRoute": "Le backend Notes exécute un code plus ancien que cette page. Désactivez puis réactivez Notes dans la page Apps pour le redémarrer.",
+        "syncConflict": "La synchronisation s’est arrêtée sur un conflit de fusion, donc rien n’a été poussé. Notes en conflit : {{paths}}",
+        "useDisk": "Utiliser la version du disque"
+      },
+      "body": {
+        "backlinks": "Liée depuis {{n}}",
+        "empty": "Sélectionnez une note, ou créez-en une avec le bouton +."
+      },
+      "boot": {
+        "loading": "Chargement…",
+        "unreachable": "Impossible de joindre le backend Notes : {{message}}. Il démarre peut-être encore."
+      },
+      "connect": {
+        "attachAction": "Rattacher le dossier",
+        "attachHelp": "Utilise un dossier git que vous avez déjà, sur place — sans seconde copie.",
+        "attachNoRemoteHelp": "Pas de dépôt distant ? Cela fonctionne aussi — le coffre se comporte de la même façon et les notes restent sur cette machine.",
+        "attachTab": "Rattacher un dossier",
+        "attaching": "Rattachement…",
+        "branch": "Branche",
+        "cancel": "Annuler",
+        "choose": "Choisir…",
+        "choosing": "Sélection…",
+        "cloneAction": "Connecter le coffre",
+        "cloneHelp": "Clone un dépôt GitHub et conserve sa propre copie de travail.",
+        "cloneTab": "Cloner un dépôt",
+        "cloning": "Clonage…",
+        "knowledgeFailed": "Coffre connecté, mais la synchronisation des connaissances a échoué : {{message}}",
+        "localFolder": "Dossier local",
+        "localFolderPlaceholder": "~/Developer/my-notes",
+        "pickerFailed": "Impossible d’ouvrir le sélecteur de dossier : {{message}}",
+        "pickerNeedsMac": "Le sélecteur de dossier nécessite macOS — saisissez le chemin.",
+        "repoUrl": "URL du dépôt",
+        "repoUrlPlaceholder": "https://github.com/you/notes",
+        "subfolder": "Sous-dossier (facultatif)",
+        "subfolderPlaceholder": "notes",
+        "title": "Connecter un coffre",
+        "token": "Jeton d’accès (facultatif)",
+        "tokenPlaceholder": "github_pat_…"
+      },
+      "editor": {
+        "blockAria": "Modifier le bloc",
+        "renameHint": "Cliquez pour renommer cette note",
+        "titleAria": "Titre de la note"
+      },
+      "header": {
+        "view_raw": "Source Markdown",
+        "view_rendered": "Rendu"
+      },
+      "knowledge": {
+        "connectHelp": "Ajoute ce coffre à la bibliothèque de Connaissances pour que les agents puissent chercher dans vos notes. Modifiable ensuite dans {{capabilities}} → {{tab}}.",
+        "label": "Synchroniser avec les connaissances {{productName}}"
+      },
+      "manifest": {
+        "description": "Tiens un carnet en markdown qui vit dans un dépôt git, pour que tes notes soient versionnées, portables et lisibles par n’importe quel autre éditeur. Indique-lui un dépôt GitHub et il en clone une copie de travail, ou rattache un dossier que tu possèdes déjà — y compris un coffre Obsidian existant — et il adopte ce checkout sur place, sans en faire une seconde copie. Les notes s’affichent en texte mis en forme dans lequel tu cliques directement pour l’éditer, les [[wikilinks]] les relient entre elles, et chaque note montre ce qui pointe vers elle. La synchronisation commite, récupère et pousse en une seule étape, et un conflit de fusion est signalé — en listant les notes en conflit et en abandonnant la fusion — au lieu d’écraser quoi que ce soit.",
+        "display_name": "Notes",
+        "highlight_1": "Tes notes sont du markdown brut dans un dépôt git — aucun verrouillage, lisibles par Obsidian ou tout autre éditeur",
+        "highlight_2": "Clone un dépôt GitHub comme coffre, ou rattache un dossier que tu possèdes déjà sans le copier",
+        "highlight_3": "Clique sur n’importe quel bloc rendu pour l’éditer sur place ; Enter crée un nouveau bloc, Tab imbrique les listes",
+        "highlight_4": "Des [[Wikilinks]] entre les notes, avec une liste de liens entrants indiquant ce qui pointe vers la note que tu lis",
+        "highlight_5": "Recherche plein texte dans les titres et le contenu, plus des vues par dossier ou à plat avec six ordres de tri",
+        "highlight_6": "La synchronisation en une étape commite, récupère et pousse ; un conflit de fusion liste les notes en conflit et n’écrase rien",
+        "highlight_7": "Un enregistrement est refusé si le fichier a changé sur le disque depuis son ouverture, donc les modifications faites ailleurs ne sont jamais écrasées",
+        "highlight_8": "Indexe si tu veux un coffre dans la bibliothèque Connaissances pour que les agents puissent chercher dans tes notes",
+        "page_label": "Notes",
+        "use_case_1": "Modifie un coffre Markdown portable avec wikilinks, backlinks, recherche, historique Git et indexation Knowledge facultative.",
+        "configuration_1": "Clone un dépôt Git ou rattache un dossier local existant, puis active éventuellement Knowledge et la synchronisation planifiée ; les clones GitHub privés nécessitent un PAT ou une CLI gh authentifiée."
+      },
+      "panel": {
+        "connectVault": "Connecter un coffre",
+        "hide": "Masquer le panneau des notes",
+        "newRootNote": "Nouvelle note au niveau supérieur",
+        "noMatches": "Aucun résultat",
+        "searchPlaceholder": "Rechercher des notes",
+        "show": "Afficher le panneau des notes",
+        "sortAndView": "Tri et affichage",
+        "sortSection": "Trier par",
+        "switchVault": "Changer de coffre",
+        "vaults": "Coffres",
+        "viewSection": "Affichage",
+        "view_folders": "Dossiers",
+        "view_list": "Liste simple"
+      },
+      "preview": {
+        "detailsSummaryFallback": "Détails",
+        "mermaidError": "Diagramme Mermaid invalide — sa source est affichée."
+      },
+      "row": {
+        "delete": "Supprimer la note",
+        "deleteAction": "Supprimer",
+        "deleteConfirm": "Vous pouvez la restaurer depuis <trash>.trash</trash>. Les notes dans la corbeille ne sont pas synchronisées avec le dépôt distant.",
+        "deleteTitle": "Déplacer « {{title}} » vers la corbeille ?",
+        "duplicate": "Dupliquer la note",
+        "pin": "Épingler la note",
+        "rename": "Renommer la note",
+        "renameField": "Nom de la note",
+        "unpin": "Détacher la note"
+      },
+      "settings": {
+        "active": "Actif",
+        "authGh": "Utilise votre connexion GitHub CLI.",
+        "authNone": "Aucun accès GitHub — ajoutez un jeton pour synchroniser des dépôts privés.",
+        "authStored": "Utilise un jeton stocké dans cette application.",
+        "autoCommit": "Enregistrement auto dans l'historique",
+        "autoCommitHelp": "Valide vos modifications dans l'historique git local du coffre toutes les {{n}} minutes, pour ne jamais avoir à enregistrer à la main. Rien n'est poussé vers un dépôt distant.",
+        "autoSync": "Synchronisation automatique",
+        "autoSyncHelp": "Envoie vos modifications vers GitHub et récupère les dernières, sur une minuterie. Continue en arrière-plan lorsque Notes est fermé, tant que {{productName}} est ouvert. En pause tant qu’un conflit attend votre décision.",
+        "badgeCloned": "Cloné",
+        "badgeLocal": "Dossier local",
+        "clear": "Effacer",
+        "close": "Fermer les réglages",
+        "every": "Toutes les",
+        "githubSection": "Accès GitHub",
+        "intervalAria": "Intervalle de synchronisation automatique en minutes",
+        "knowledgeAdded": "Ajouté aux Connaissances.",
+        "knowledgeAddedCount_one": "Ajouté aux Connaissances — {{n}} fichier en file d’indexation.",
+        "knowledgeAddedCount_many": "Ajouté aux Connaissances — {{n}} de fichiers en file d’indexation.",
+        "knowledgeAddedCount_other": "Ajouté aux Connaissances — {{n}} fichiers en file d’indexation.",
+        "knowledgeAdding": "Ajout aux Connaissances…",
+        "knowledgeIndexed": "Indexé dans la bibliothèque de Connaissances — les agents peuvent chercher dans ces notes.",
+        "knowledgeNotIndexed": "Non indexé. Activez pour que les agents cherchent dans ce coffre.",
+        "knowledgeRemoved": "Retiré des Connaissances.",
+        "knowledgeRemoving": "Retrait des Connaissances…",
+        "minutes": "minutes",
+        "noRemote": "Aucun dépôt distant",
+        "open": "Ouvrir",
+        "prefsSaveFailed": "Impossible d’enregistrer le réglage de synchronisation : {{message}}",
+        "recording": "Enregistrement…",
+        "remove": "Retirer",
+        "removeConfirm": "Retirer ce coffre de l’application ? Vos fichiers restent intacts sur le disque — seule la connexion est oubliée.",
+        "removeFailed": "Impossible de retirer le coffre : {{message}}",
+        "removeIt": "Le retirer",
+        "reset": "Réinitialiser",
+        "save": "Enregistrer",
+        "shortcut": "Raccourci de synchronisation manuelle",
+        "shortcutHelpIdle": "Cliquez pour enregistrer un nouveau raccourci.",
+        "shortcutHelpRecording": "Appuyez sur les touches souhaitées — Échap pour annuler.",
+        "shortcutNeedsModifier": "Utilisez au moins ⌘, Ctrl ou ⌥ — une simple lettre se déclencherait pendant la saisie.",
+        "subtitle": "Coffres, accès GitHub et synchronisation",
+        "syncSection": "Synchronisation",
+        "title": "Réglages",
+        "tokenCleared": "Jeton effacé.",
+        "tokenClearFailed": "Impossible d’effacer le jeton : {{message}}",
+        "tokenPlaceholderEmpty": "github_pat_…",
+        "tokenPlaceholderStored": "Remplacer le jeton stocké…",
+        "tokenSaved": "Jeton enregistré.",
+        "tokenSaveFailed": "Impossible d’enregistrer le jeton : {{message}}",
+        "vaultsSection": "Coffres"
+      },
+      "sort": {
+        "createdNewOld": "Création — du plus récent au plus ancien",
+        "createdOldNew": "Création — du plus ancien au plus récent",
+        "modifiedNewOld": "Modification — du plus récent au plus ancien",
+        "modifiedOldNew": "Modification — du plus ancien au plus récent",
+        "nameAZ": "Nom de fichier — de A à Z",
+        "nameZA": "Nom de fichier — de Z à A"
+      },
+      "sync": {
+        "action": "Synchroniser",
+        "ago_d": "Synchronisé il y a {{n}} j",
+        "ago_h": "Synchronisé il y a {{n}} h",
+        "ago_m": "Synchronisé il y a {{n}} min",
+        "justNow": "Synchronisé à l’instant",
+        "localAction": "Enregistrer en local",
+        "localTitle": "Valider les modifications dans l'historique git local de ce coffre. Ce coffre n'a pas de dépôt distant, rien n'est donc poussé.",
+        "syncing": "Synchronisation"
+      },
+      "title": "Notes",
+      "trash": {
+        "empty": "Rien n'a encore été supprimé de ce coffre, il n'y a donc pas de dossier .trash.",
+        "failed": "Impossible d'ouvrir le dossier : {{message}}",
+        "open": "Ouvrir le dossier .trash",
+        "unsupported": "L'ouverture d'un dossier n'est pas prise en charge sur ce système."
+      }
+    }
+  },
+  "api": {
+    "client": {
+      "proxy_challenge_framed": "Ouvre {{origin}} dans un nouvel onglet : si une page de connexion apparaît, la session de ton proxy d'accès a expiré. La connexion ne fonctionne pas dans ce panneau. Connecte-toi là-bas, puis recharge cette page.",
+      "proxy_challenge_reload": "Recharge cet onglet du navigateur : si une page de connexion apparaît, la session de ton proxy d'accès a expiré. Sinon, un proxy ou un pare-feu devant ce tableau de bord a refusé la requête ; consulte les journaux du proxy ou réessaie plus tard."
+    }
+  },
+  "nav": {
+    "agent_capabilities": "Personnaliser",
+    "mcp_servers": "Serveurs MCP"
+  },
+  "pages": {
+    "capabilitiesPage": {
+      "knowledge_label": "Connaissances",
+      "skills_label": "Compétences"
+    }
+  },
+  "components": {
+    "readingWidthToggle": {
+      "title_md": "Largeur moyenne",
+      "title_full": "Pleine largeur"
+    }
+  }
+}
