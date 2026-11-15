@@ -2,7 +2,10 @@
 
 This repository was ported from Kiro Crew's built-in Notes app as it stands at
 the head of [kirodotdev/KiroCrew#36365](https://github.com/kirodotdev/KiroCrew/pull/36365)
-(`9c5ecb203b`, which carries #36327 and #36346 under it): the backend at
+(`9c5ecb203b`, which carries #36327 and #36346 under it), and is kept in step
+with that pull request's later head `f38999c0e3` and with Kiro Crew main up to
+`af94fac51f`, whose changes to the copied files are a test comment only: the
+backend at
 `src/kiro_crew/apps/builtins/md_notebook/`, its dashboard page at
 `website/src/apps/md-notebook/`, its store art at
 `website/public/app-assets/md-notebook/`, and its tests: the two under the
@@ -23,7 +26,8 @@ here.
 
 ## What carried over unchanged
 
-- `app.json` `name` (`md-notebook`), `version` (`1.0.0`), `permissions`
+- `app.json` `name` (`md-notebook`), `version` (the built-in's `1.0.0`, raised
+  to `1.0.1` for the first release Kiro Crew pins, and only ever raised), `permissions`
   (`/apps/md-notebook/api`, `/api/knowledge`), `credentialMasks` (`state/`),
   `platform`, `defaultEnabled` (`false`), every display field, `useCases` and
   `configuration`. `tests/test_manifest_contract.py` compares them with the
