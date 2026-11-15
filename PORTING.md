@@ -121,13 +121,20 @@ is pinned by `tests/test_manifest_contract.py`.
 1. **The state moves are core's.** Older installs kept the token, registry and
    settings in `<data home>/md-notebook-staging/` (and before that in
    `workspace/md-notebook/`). Core's `md_notebook_state` moves them into
-   `apps/md-notebook/data/state/` before any spawn, and core's
-   `apps/backend.py` waits for that move to seal before it starts the SHIPPED
-   backend. An external backend gets the move (it runs in spawn prep, by app
-   name) but not the wait: on the very first start after an adoption, before
-   the move has sealed once, it could read an empty state directory and show
-   no vaults until its next start. Closing this needs the wait keyed on the
-   app's name rather than on the shipped package.
+   `apps/md-notebook/data/state/` in two steps. Spawn prep runs only the first
+   (the bare `workspace/md-notebook/` names into `md-notebook-staging/`). The
+   second, into this app's `data/state/`, runs only in the gateway and waits
+   while a sandbox of an older build is alive. On a core build without
+   kirodotdev/KiroCrew#37464 that second step ran only from the SHIPPED
+   backend's start, so an adopted backend got neither the move nor the wait.
+   On a host where it had not sealed (Notes disabled at the upgrade, or an
+   older sandbox alive), the adopted backend would open an empty `data/state/`,
+   and nothing would retry. #37464 closes this in core, with no app id in the
+   adoption code: APPLY holds the swap until the move has sealed and runs it
+   whether or not the app is enabled; a record adopted under pin trust gets the
+   move at every boot; and the backend spawn waits for it for that record too.
+   Nothing changes in this repository, but md-notebook must not be pinned on a
+   core build without #37464.
 2. **Core still names Notes.** Besides `md_notebook_state`, the masks of the old
    locations (`sandbox_leaves.py`, `sandbox_precreate.py`, `sandbox_staging.py`,
    `security/paths_lists.py`), the shipped backend's `-I` launch in
